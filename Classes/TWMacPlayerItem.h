@@ -12,7 +12,7 @@
 
 @interface TWMacPlayerItem : NSObject
 
-@property (nonatomic, retain) TWPlayer * player;
+@property (nonatomic, retain) id player;
 @property (nonatomic, assign) BOOL connected;
 
 @end

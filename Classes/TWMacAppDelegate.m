@@ -7,6 +7,7 @@
 //
 
 #import "TWMacAppDelegate.h"
+#import "TWBrowser.h"
 #import "TWMacPlayerItem.h"
 #import "TWMacGameView.h"
 #import "TWPlayer.h"
@@ -19,6 +20,7 @@
 @interface TWMacAppDelegate ()
 
 @property (nonatomic, retain) TWGame * game;
+@property (nonatomic, retain) TWBrowser * browser;
 
 - (void) insertObject:(TWMacPlayerItem *)p inPlayerItemsAtIndex:(NSUInteger)index;
 - (void) removeObjectFromPlayerItemsAtIndex:(NSUInteger)index;
@@ -60,8 +62,8 @@
 
 - (void) joinGame:(id)sender {
 	self.playerItems = [NSMutableArray array];
-	self.game = [[[TWGame alloc] init] autorelease];
-	game.delegate = self;
+	self.browser = [[[TWBrowser alloc] initWithType:@"_tankwars._tcp." domain:@""] autorelease];
+	browser.delegate = self;
 	[[NSApplication sharedApplication] beginSheet:connectingSheet
 								   modalForWindow:window
 									modalDelegate:self
@@ -111,8 +113,33 @@
 	item.player = player;
 }
 
+#pragma mark -
+
+- (void) browser:(TWBrowser *)browser didFindService:(NSNetService *)service {
+	TWMacPlayerItem * item = [[[TWMacPlayerItem alloc] init] autorelease];
+	[self insertObject:item inPlayerItemsAtIndex:[playerItems count]];
+	item.connected = YES;
+	item.player = service;
+}
+
+- (void) browser:(TWBrowser *)browser didRemoveService:(NSNetService *)service {
+	for (TWMacPlayerItem * item in playerItems) {
+		if (item.player == service) {
+			[playerItems removeObject:item];
+			break;
+		}
+	}
+}
+
+- (void) browser:(TWBrowser *)browser didResolveService:(NSNetService *)service {
+	// TODO: make connection
+	// TODO: start game
+}
+
+#pragma mark -
+
 - (void) updateView {
-	view.game = game; // TODO: get rid of this line
+	view.game = game; // TODO: get rid of this line somehow
 	[view setNeedsDisplay:YES];
 }
 
@@ -125,20 +152,32 @@
 }
 
 - (IBAction) didSelectStart:(id)sender {
+	if (browser) {
+		NSLog(@"indexes: %@", [self.collectionView selectionIndexes]);
+		TWMacPlayerItem * item = [playerItems objectAtIndex:[[self.collectionView selectionIndexes] lastIndex]];
+		[browser resolveService:item.player];
+	}
+	else {
+		for (TWMacPlayerItem * item in playerItems)
+			[game playerDidLoad:item.player];
+		[game start];
+	}
+
+	
+	
 	[[NSApplication sharedApplication] endSheet:connectingSheet returnCode:kStartReturnCode];
-	[game start];
 }
 
-- (void) start {
-	[self didSelectStart:self];
-}
+//- (void) start {
+//	[self didSelectStart:self];
+//}
 
 #pragma mark -
 
 - (void)windowWillClose:(NSNotification *)notification {
 	NSWindow * theWindow = [notification object];
 	if (theWindow == gameWindow) {
-		// TODO: 
+		// TODO: show the start window
 	}
 }
 

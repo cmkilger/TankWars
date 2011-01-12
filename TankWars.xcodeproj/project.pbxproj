@@ -6,25 +6,61 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		9A95294912DD4C2D003D8FA4 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9A95295212DD4C65003D8FA4 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				9A95294D12DD4C32003D8FA4 /* PBXTargetDependency */,
+				9A95294F12DD4C32003D8FA4 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		256AC3DA0F4B6AC300CF3369 /* TWMacAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* TWMacAppDelegate.m */; };
 		8B07B73D12B2A77F00D25603 /* TWGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B07B73C12B2A77F00D25603 /* TWGame.m */; };
 		8B07B74112B2A7BB00D25603 /* TWPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B07B74012B2A7BB00D25603 /* TWPlayer.m */; };
 		8B07B78612B2B26300D25603 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58150DA1D0A300B32029 /* MainMenu.xib */; };
-		8B07B78712B2B26900D25603 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165DFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8B9B9A0012B29C6700C5B3B2 /* TWConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B99FF12B29C6700C5B3B2 /* TWConnection.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9A04AC3512B4882800664CAD /* TWMacGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A04AC3412B4882800664CAD /* TWMacGameView.m */; };
 		9A72AC1D12B2861900AD9F2F /* TWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A72AC1C12B2861900AD9F2F /* TWServer.m */; };
+		9A8A9FD112DD46D900E44D9B /* main_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A9FD012DD46D900E44D9B /* main_ios.m */; };
+		9A8A9FDB12DD47CA00E44D9B /* TWIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A9FDA12DD47CA00E44D9B /* TWIOSAppDelegate.m */; };
 		9A8CE4F812B34D7F005E84F6 /* libChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8CE4F712B34D7F005E84F6 /* libChipmunk.a */; };
 		9A8CE53012B3EB84005E84F6 /* TWMacPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CE52F12B3EB84005E84F6 /* TWMacPlayerItem.m */; };
+		9A9528F712DD48B6003D8FA4 /* TWIOSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9528F512DD48B6003D8FA4 /* TWIOSGameViewController.m */; };
+		9A9528F812DD48B6003D8FA4 /* TWIOSGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A9528F612DD48B6003D8FA4 /* TWIOSGameViewController.xib */; };
+		9A9528FA12DD48E9003D8FA4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A9528F912DD48E9003D8FA4 /* MainWindow.xib */; };
+		9AB9C7E812DD4E9A00B087CD /* TWBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C7E712DD4E9A00B087CD /* TWBrowser.m */; };
+		9AB9C7E912DD4E9A00B087CD /* TWBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C7E712DD4E9A00B087CD /* TWBrowser.m */; };
 		9AC9421312D99F4300189772 /* TWBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC9421212D99F4300189772 /* TWBullet.m */; };
-		9AE73B3512D9223B007440C2 /* TWMacGameWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE73B3412D9223B007440C2 /* TWMacGameWindowController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9A95294C12DD4C32003D8FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = TankWars;
+		};
+		9A95294E12DD4C32003D8FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8A9FC012DD469A00E44D9B;
+			remoteInfo = "TankWars-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
@@ -49,6 +85,11 @@
 		9A72AC1B12B2861900AD9F2F /* TWServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWServer.h; sourceTree = "<group>"; };
 		9A72AC1C12B2861900AD9F2F /* TWServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWServer.m; sourceTree = "<group>"; };
 		9A77E82212DA712E00CB4938 /* TWCollisionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCollisionTypes.h; sourceTree = "<group>"; };
+		9A8A9FB912DD464500E44D9B /* TankWars-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TankWars-iOS-Info.plist"; sourceTree = "<group>"; };
+		9A8A9FC112DD469A00E44D9B /* TankWars-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TankWars-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8A9FD012DD46D900E44D9B /* main_ios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main_ios.m; sourceTree = "<group>"; };
+		9A8A9FD912DD47CA00E44D9B /* TWIOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWIOSAppDelegate.h; sourceTree = "<group>"; };
+		9A8A9FDA12DD47CA00E44D9B /* TWIOSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWIOSAppDelegate.m; sourceTree = "<group>"; };
 		9A8CE4DA12B34D5F005E84F6 /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
 		9A8CE4DB12B34D5F005E84F6 /* chipmunk_ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_ffi.h; sourceTree = "<group>"; };
 		9A8CE4DC12B34D5F005E84F6 /* chipmunk_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_private.h; sourceTree = "<group>"; };
@@ -81,10 +122,14 @@
 		9A8CE52E12B3EB84005E84F6 /* TWMacPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMacPlayerItem.h; sourceTree = "<group>"; };
 		9A8CE52F12B3EB84005E84F6 /* TWMacPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMacPlayerItem.m; sourceTree = "<group>"; };
 		9A8CE5A812B3F981005E84F6 /* TWGameDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGameDelegate.h; sourceTree = "<group>"; };
+		9A9528F412DD48B6003D8FA4 /* TWIOSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWIOSGameViewController.h; sourceTree = "<group>"; };
+		9A9528F512DD48B6003D8FA4 /* TWIOSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWIOSGameViewController.m; sourceTree = "<group>"; };
+		9A9528F612DD48B6003D8FA4 /* TWIOSGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWIOSGameViewController.xib; sourceTree = "<group>"; };
+		9A9528F912DD48E9003D8FA4 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		9AB9C7E612DD4E9A00B087CD /* TWBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBrowser.h; sourceTree = "<group>"; };
+		9AB9C7E712DD4E9A00B087CD /* TWBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBrowser.m; sourceTree = "<group>"; };
 		9AC9421112D99F4300189772 /* TWBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBullet.h; sourceTree = "<group>"; };
 		9AC9421212D99F4300189772 /* TWBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBullet.m; sourceTree = "<group>"; };
-		9AE73B3312D9223B007440C2 /* TWMacGameWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMacGameWindowController.h; sourceTree = "<group>"; };
-		9AE73B3412D9223B007440C2 /* TWMacGameWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMacGameWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +142,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9A8A9FBF12DD469A00E44D9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8CE51F12B3DECF005E84F6 /* Mac */,
+				9A8A9FD712DD476100E44D9B /* iOS */,
 				8B07B73A12B2A68A00D25603 /* Networking */,
 				8B07B73E12B2A78600D25603 /* Game */,
 			);
@@ -133,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* TankWars.app */,
+				9A8A9FC112DD469A00E44D9B /* TankWars-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +209,7 @@
 			children = (
 				256AC3F00F4B6AF500CF3369 /* TankWars_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				9A8A9FD012DD46D900E44D9B /* main_ios.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -163,8 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				8D1107310486CEB800E47090 /* TankWars-Info.plist */,
-				089C165DFE840E0CC02AAC07 /* InfoPlist.strings */,
+				9A8A9FB912DD464500E44D9B /* TankWars-iOS-Info.plist */,
 				1DDD58150DA1D0A300B32029 /* MainMenu.xib */,
+				9A9528F912DD48E9003D8FA4 /* MainWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -184,6 +240,8 @@
 				8B07B73812B2A68300D25603 /* TWServerDelegate.h */,
 				9A72AC1B12B2861900AD9F2F /* TWServer.h */,
 				9A72AC1C12B2861900AD9F2F /* TWServer.m */,
+				9AB9C7E612DD4E9A00B087CD /* TWBrowser.h */,
+				9AB9C7E712DD4E9A00B087CD /* TWBrowser.m */,
 				8B4257D312B2A0BC0047DC53 /* TWConnectionDelegate.h */,
 				8B9B99FE12B29C6700C5B3B2 /* TWConnection.h */,
 				8B9B99FF12B29C6700C5B3B2 /* TWConnection.m */,
@@ -204,6 +262,18 @@
 				9AC9421212D99F4300189772 /* TWBullet.m */,
 			);
 			name = Game;
+			sourceTree = "<group>";
+		};
+		9A8A9FD712DD476100E44D9B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A8A9FD912DD47CA00E44D9B /* TWIOSAppDelegate.h */,
+				9A8A9FDA12DD47CA00E44D9B /* TWIOSAppDelegate.m */,
+				9A9528F412DD48B6003D8FA4 /* TWIOSGameViewController.h */,
+				9A9528F512DD48B6003D8FA4 /* TWIOSGameViewController.m */,
+				9A9528F612DD48B6003D8FA4 /* TWIOSGameViewController.xib */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		9A8CE4D612B34D3D005E84F6 /* External */ = {
@@ -266,8 +336,6 @@
 				9A8CE52F12B3EB84005E84F6 /* TWMacPlayerItem.m */,
 				9A04AC3312B4882800664CAD /* TWMacGameView.h */,
 				9A04AC3412B4882800664CAD /* TWMacGameView.m */,
-				9AE73B3312D9223B007440C2 /* TWMacGameWindowController.h */,
-				9AE73B3412D9223B007440C2 /* TWMacGameWindowController.m */,
 			);
 			name = Mac;
 			sourceTree = "<group>";
@@ -293,6 +361,23 @@
 			productReference = 8D1107320486CEB800E47090 /* TankWars.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9A8A9FC012DD469A00E44D9B /* TankWars-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A8A9FCF12DD46A500E44D9B /* Build configuration list for PBXNativeTarget "TankWars-iOS" */;
+			buildPhases = (
+				9A8A9FBD12DD469A00E44D9B /* Resources */,
+				9A8A9FBE12DD469A00E44D9B /* Sources */,
+				9A8A9FBF12DD469A00E44D9B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TankWars-iOS";
+			productName = "TankWars-iOS";
+			productReference = 9A8A9FC112DD469A00E44D9B /* TankWars-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,7 +400,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				9A95294912DD4C2D003D8FA4 /* All */,
 				8D1107260486CEB800E47090 /* TankWars */,
+				9A8A9FC012DD469A00E44D9B /* TankWars-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -325,8 +412,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B07B78712B2B26900D25603 /* InfoPlist.strings in Resources */,
 				8B07B78612B2B26300D25603 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8A9FBD12DD469A00E44D9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A9528F812DD48B6003D8FA4 /* TWIOSGameViewController.xib in Resources */,
+				9A9528FA12DD48E9003D8FA4 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,14 +440,115 @@
 				8B07B74112B2A7BB00D25603 /* TWPlayer.m in Sources */,
 				9A8CE53012B3EB84005E84F6 /* TWMacPlayerItem.m in Sources */,
 				9A04AC3512B4882800664CAD /* TWMacGameView.m in Sources */,
-				9AE73B3512D9223B007440C2 /* TWMacGameWindowController.m in Sources */,
 				9AC9421312D99F4300189772 /* TWBullet.m in Sources */,
+				9AB9C7E912DD4E9A00B087CD /* TWBrowser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8A9FBE12DD469A00E44D9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8A9FD112DD46D900E44D9B /* main_ios.m in Sources */,
+				9A8A9FDB12DD47CA00E44D9B /* TWIOSAppDelegate.m in Sources */,
+				9A9528F712DD48B6003D8FA4 /* TWIOSGameViewController.m in Sources */,
+				9AB9C7E812DD4E9A00B087CD /* TWBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9A95294D12DD4C32003D8FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* TankWars */;
+			targetProxy = 9A95294C12DD4C32003D8FA4 /* PBXContainerItemProxy */;
+		};
+		9A95294F12DD4C32003D8FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A8A9FC012DD469A00E44D9B /* TankWars-iOS */;
+			targetProxy = 9A95294E12DD4C32003D8FA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9A8A9FC312DD469B00E44D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "TankWars-iOS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "TankWars-iOS";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A8A9FC412DD469B00E44D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "TankWars-iOS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "TankWars-iOS";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		9A95294A12DD4C2D003D8FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		9A95294B12DD4C2D003D8FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -376,6 +572,7 @@
 					"-fobjc-nonfragile-abi2",
 				);
 				PRODUCT_NAME = TankWars;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -399,6 +596,7 @@
 					"-fobjc-nonfragile-abi2",
 				);
 				PRODUCT_NAME = TankWars;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -434,6 +632,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A8A9FCF12DD46A500E44D9B /* Build configuration list for PBXNativeTarget "TankWars-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8A9FC312DD469B00E44D9B /* Debug */,
+				9A8A9FC412DD469B00E44D9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A95295212DD4C65003D8FA4 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A95294A12DD4C2D003D8FA4 /* Debug */,
+				9A95294B12DD4C2D003D8FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TankWars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

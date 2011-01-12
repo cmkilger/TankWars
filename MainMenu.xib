@@ -10,7 +10,9 @@
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">823</string>
 		</object>
-		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs"/>
+		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
+			<integer value="577"/>
+		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 		</array>
@@ -1299,7 +1301,7 @@
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<string key="NSWindowContentMinSize">{250, 200}</string>
 				<object class="NSView" key="NSWindowView" id="842848803">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">4352</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSScrollView" id="29205138">
@@ -1315,6 +1317,7 @@
 											<int key="NSvFlags">274</int>
 											<string key="NSFrameSize">{208, 268}</string>
 											<reference key="NSSuperview" ref="119589011"/>
+											<reference key="NSWindow"/>
 											<string key="NSMinGridSize">{0, 0}</string>
 											<string key="NSMaxGridSize">{0, 0}</string>
 											<int key="NSMaxNumberOfGridRows">0</int>
@@ -1336,12 +1339,14 @@
 													<reference key="NSColor" ref="941847600"/>
 												</object>
 											</array>
+											<bool key="NSSelectable">YES</bool>
 											<int key="NSDraggingSourceMaskForLocal">-1</int>
 											<int key="NSDraggingSourceMaskForNonLocal">0</int>
 										</object>
 									</array>
 									<string key="NSFrame">{{1, 1}, {208, 268}}</string>
 									<reference key="NSSuperview" ref="29205138"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="378922204"/>
 									<reference key="NSDocView" ref="378922204"/>
 									<object class="NSColor" key="NSBGColor" id="720721457">
@@ -1357,6 +1362,7 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{234, 1}, {15, 143}}</string>
 									<reference key="NSSuperview" ref="29205138"/>
+									<reference key="NSWindow"/>
 									<reference key="NSTarget" ref="29205138"/>
 									<string key="NSAction">_doScroller:</string>
 									<double key="NSCurValue">1</double>
@@ -1367,6 +1373,7 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{1, 144}, {233, 15}}</string>
 									<reference key="NSSuperview" ref="29205138"/>
+									<reference key="NSWindow"/>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="29205138"/>
 									<string key="NSAction">_doScroller:</string>
@@ -1375,6 +1382,7 @@
 							</array>
 							<string key="NSFrame">{{20, 60}, {210, 270}}</string>
 							<reference key="NSSuperview" ref="842848803"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="119589011"/>
 							<int key="NSsFlags">562</int>
 							<reference key="NSVScroller" ref="180157247"/>
@@ -1386,6 +1394,7 @@
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{140, 12}, {96, 32}}</string>
 							<reference key="NSSuperview" ref="842848803"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="614737607">
 								<int key="NSCellFlags">67239424</int>
@@ -1411,6 +1420,7 @@
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{44, 12}, {96, 32}}</string>
 							<reference key="NSSuperview" ref="842848803"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="184291892">
 								<int key="NSCellFlags">67239424</int>
@@ -1428,6 +1438,8 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{250, 350}</string>
+					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMinSize">{250, 222}</string>
@@ -1435,8 +1447,8 @@
 			</object>
 			<object class="NSCollectionViewItem" id="334200147"/>
 			<object class="NSView" id="1059014063">
-				<nil key="NSNextResponder"/>
-				<int key="NSvFlags">4354</int>
+				<reference key="NSNextResponder"/>
+				<int key="NSvFlags">258</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="229924042">
 						<reference key="NSNextResponder" ref="1059014063"/>
@@ -1488,6 +1500,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{270, 31}</string>
+				<reference key="NSSuperview"/>
 			</object>
 			<object class="NSUserDefaultsController" id="777808974">
 				<bool key="NSSharedInstance">YES</bool>
@@ -1516,7 +1529,7 @@
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<object class="NSView" key="NSWindowView" id="784403710">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSButton" id="1067995054">
@@ -1524,6 +1537,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{14, 44}, {121, 32}}</string>
 							<reference key="NSSuperview" ref="784403710"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="790135805">
 								<int key="NSCellFlags">67239424</int>
@@ -1544,6 +1558,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{14, 12}, {121, 32}}</string>
 							<reference key="NSSuperview" ref="784403710"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="492136376">
 								<int key="NSCellFlags">67239424</int>
@@ -1561,6 +1576,8 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{149, 92}</string>
+					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1600, 1178}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
@@ -1576,7 +1593,7 @@
 				<string key="NSWindowContentMaxSize">{960, 640}</string>
 				<string key="NSWindowContentMinSize">{960, 640}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSCustomView" id="73163297">
@@ -1584,10 +1601,13 @@
 							<int key="NSvFlags">274</int>
 							<string key="NSFrameSize">{960, 640}</string>
 							<reference key="NSSuperview" ref="439893737"/>
+							<reference key="NSWindow"/>
 							<string key="NSClassName">TWMacGameView</string>
 						</object>
 					</array>
 					<string key="NSFrameSize">{960, 640}</string>
+					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMinSize">{960, 662}</string>
@@ -2411,6 +2431,14 @@
 						<reference key="destination" ref="972006081"/>
 					</object>
 					<int key="connectionID">658</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">collectionView</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="378922204"/>
+					</object>
+					<int key="connectionID">678</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3893,7 +3921,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">658</int>
+			<int key="maxID">678</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3972,6 +4000,82 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/TWMacGameView.h</string>
+					</object>
+				</object>
+			</array>
+			<array class="NSMutableArray" key="referencedPartialClassDescriptionsV3.1+">
+				<object class="IBPartialClassDescription">
+					<string key="className">TWMacAppDelegate</string>
+					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="createGame:">id</string>
+						<string key="didSelectCancel:">id</string>
+						<string key="didSelectStart:">id</string>
+						<string key="joinGame:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="createGame:">
+							<string key="name">createGame:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="didSelectCancel:">
+							<string key="name">didSelectCancel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="didSelectStart:">
+							<string key="name">didSelectStart:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="joinGame:">
+							<string key="name">joinGame:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="collectionView">NSCollectionView</string>
+						<string key="connectingSheet">NSWindow</string>
+						<string key="gameWindow">NSWindow</string>
+						<string key="playerItems">NSMutableArray</string>
+						<string key="view">TWMacGameView</string>
+						<string key="window">NSWindow</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="collectionView">
+							<string key="name">collectionView</string>
+							<string key="candidateClassName">NSCollectionView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="connectingSheet">
+							<string key="name">connectingSheet</string>
+							<string key="candidateClassName">NSWindow</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gameWindow">
+							<string key="name">gameWindow</string>
+							<string key="candidateClassName">NSWindow</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="playerItems">
+							<string key="name">playerItems</string>
+							<string key="candidateClassName">NSMutableArray</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="view">
+							<string key="name">view</string>
+							<string key="candidateClassName">TWMacGameView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="window">
+							<string key="name">window</string>
+							<string key="candidateClassName">NSWindow</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBDocumentRelativeSource</string>
+						<string key="minorKey">../../../Development/Cocoa/TankWars/Classes/TWMacAppDelegate.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">TWMacGameView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBDocumentRelativeSource</string>
+						<string key="minorKey">../../../Development/Cocoa/TankWars/Classes/TWMacGameView.h</string>
 					</object>
 				</object>
 			</array>
