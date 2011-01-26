@@ -83,6 +83,8 @@
 #pragma mark -
 
 - (CGPoint) location {
+	if (!body)
+		return CGPointZero;
 	cpVect loc = cpBodyGetPos(body);
 	return CGPointMake(loc.x, loc.y);
 }
@@ -93,6 +95,8 @@
 }
 
 - (CGFloat) rotation {
+	if (!body)
+		return 0;
 	return cpvtoangle(cpBodyGetRot(body));
 }
 
@@ -102,6 +106,8 @@
 }
 
 - (CGFloat) velocity {
+	if (!body)
+		return 0;
 	return cpvlength(cpBodyGetVel(body));
 }
 

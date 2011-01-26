@@ -115,9 +115,11 @@ void postBullet(cpSpace *space, void *key, void *data);
 	[remotePlayers addObject:player];
 	[connectingPlayers removeObject:player];
 	[delegate playerConnected:player];
+	[player.connection sendData:[self playerDataForPlayer:localPlayer]];
 	for (TWPlayer * remotePlayer in remotePlayers) {
+		[player.connection sendData:[self playerDataForPlayer:remotePlayer]];
 		if (player != remotePlayer)
-			[connection sendData:[self playerDataForPlayer:player]];
+			[remotePlayer.connection sendData:[self playerDataForPlayer:player]];
 	}
 }
 
