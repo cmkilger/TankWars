@@ -16,7 +16,6 @@
 @interface TWGame ()
 
 @property (nonatomic, retain) TWServer * server;
-@property (nonatomic, retain) TWConnection * connection;
 @property (nonatomic, retain) NSMutableData * savedData;
 @property (nonatomic, assign) CGSize arenaSize;
 @property (nonatomic, retain) NSMutableArray * connectingPlayers;
@@ -356,7 +355,7 @@ FAILED:
 			[remotePlayer.connection sendData:data];
 		}
 	}
-
+	
 	[delegate updateView];
 }
 

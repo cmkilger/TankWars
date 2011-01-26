@@ -13,6 +13,7 @@
 typedef enum {			
 	TWPlayerPacketTypeName = 4,
 	TWPlayerPacketTypeLocation = 5,
+	TWPlayerPacketTypeFire = 6,
 } TWPlayerPacketType;
 
 @class TWGame;

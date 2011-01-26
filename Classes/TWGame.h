@@ -20,10 +20,12 @@ typedef enum {
 } TWGamePacketType;
 
 @class TWPlayer;
+@class TWConnection;
 
 @interface TWGame : NSObject <TWServerDelegate, TWConnectionDelegate>
 
 @property (nonatomic, assign) id<TWGameDelegate> delegate;
+@property (nonatomic, retain) TWConnection * connection;
 @property (nonatomic, retain) TWPlayer * localPlayer;
 @property (nonatomic, retain) NSMutableArray * remotePlayers;
 @property (nonatomic, readonly) NSArray * allPlayers;
