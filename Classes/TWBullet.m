@@ -81,4 +81,28 @@
 		cpSpaceRemoveShape(space, shape);
 }
 
+#pragma mark -
+#pragma mark Bullet Info
+
+- (NSDictionary *) bulletInfo {
+	CGPoint aLocation = self.location;
+	CGFloat aRotation = self.rotation;
+	CGFloat aVelocity = self.velocity;
+	
+	NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:
+						   [NSNumber numberWithFloat:aLocation.x], @"locationX",
+						   [NSNumber numberWithFloat:aLocation.y], @"locationY",
+						   [NSNumber numberWithFloat:aRotation], @"rotation",
+						   [NSNumber numberWithFloat:aVelocity], @"velocity",
+						   nil];
+	
+	return dict;
+}
+
+- (void) setBulletInfo:(NSDictionary *)dict {
+	self.location = CGPointMake([[dict objectForKey:@"locationX"] floatValue], [[dict objectForKey:@"locationY"] floatValue]);
+	self.rotation = [[dict objectForKey:@"rotation"] floatValue];
+	self.velocity = [[dict objectForKey:@"velocity"] floatValue];
+}
+
 @end

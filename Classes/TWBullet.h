@@ -17,6 +17,8 @@
 @property (nonatomic, assign) CGFloat rotation;
 @property (nonatomic, assign) CGFloat velocity;
 @property (nonatomic, assign) BOOL destroyed;
+@property (nonatomic, assign) NSUInteger identifier;
+@property (nonatomic, retain) NSDictionary * bulletInfo;
 
 - (id) initWithSpace:(cpSpace *)space;
 - (void) update:(NSTimeInterval)dt;
