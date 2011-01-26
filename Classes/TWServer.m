@@ -71,7 +71,7 @@ void AcceptCallback (CFSocketRef s, CFSocketCallBackType callbackType, CFDataRef
 							SOCK_STREAM,
 							IPPROTO_TCP,
 							kCFSocketAcceptCallBack,
-							AcceptCallback,
+							&AcceptCallback,
 							&context);
 	
 	// Error check

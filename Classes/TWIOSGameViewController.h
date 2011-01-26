@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class TWIOSGameView;
+@class TWGame;
 
-@interface TWIOSGameViewController : UIViewController {
+@interface TWIOSGameViewController : UIViewController
 
-}
+@property (nonatomic, retain) IBOutlet TWIOSGameView * gameView;
+@property (nonatomic, retain) TWGame * game;
+
+- (void) update;
 
 @end

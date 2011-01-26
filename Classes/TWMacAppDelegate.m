@@ -92,7 +92,7 @@
 - (void) removePlayer:(TWPlayer *)player {
 	for (TWMacPlayerItem * item in playerItems) {
 		if (item.player == player) {
-			[playerItems removeObject:item];
+			[self removeObjectFromPlayerItemsAtIndex:[playerItems indexOfObject:item]];
 			break;
 		}
 	}
@@ -131,9 +131,16 @@
 	}
 }
 
-- (void) browser:(TWBrowser *)browser didResolveService:(NSNetService *)service {
-	// TODO: make connection
+- (void) browser:(TWBrowser *)browser didMakeConnection:(TWConnection *)connection {
 	// TODO: start game
+	self.game = [[[TWGame alloc] initWithConnection:connection] autorelease];
+	game.delegate = self;
+	[game start];
+}
+
+- (void) browser:(TWBrowser *)browser didNotResolveService:(NSNetService *)service errorDict:(NSDictionary *)errorDict {
+	// TODO: 
+	NSLog(@"%@", errorDict);
 }
 
 #pragma mark -
@@ -158,19 +165,13 @@
 		[browser resolveService:item.player];
 	}
 	else {
-		for (TWMacPlayerItem * item in playerItems)
-			[game playerDidLoad:item.player];
+//		for (TWMacPlayerItem * item in playerItems)
+//			[game playerDidLoad:item.player];
 		[game start];
 	}
-
-	
 	
 	[[NSApplication sharedApplication] endSheet:connectingSheet returnCode:kStartReturnCode];
 }
-
-//- (void) start {
-//	[self didSelectStart:self];
-//}
 
 #pragma mark -
 

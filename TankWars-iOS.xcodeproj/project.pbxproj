@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		8B50942212DF9B1500F9D524 /* TWIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50940612DF9B1500F9D524 /* TWIOSAppDelegate.m */; };
+		8B50942312DF9B1500F9D524 /* TWIOSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50940812DF9B1500F9D524 /* TWIOSGameViewController.m */; };
+		8B50942412DF9B1500F9D524 /* TWIOSGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B50940912DF9B1500F9D524 /* TWIOSGameViewController.xib */; };
+		8B50942512DF9B1500F9D524 /* TWIOSNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50940B12DF9B1500F9D524 /* TWIOSNewGameViewController.m */; };
+		8B50942612DF9B1500F9D524 /* TWIOSNewGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B50940C12DF9B1500F9D524 /* TWIOSNewGameViewController.xib */; };
+		8B50942712DF9B1500F9D524 /* TWIOSConnectingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50940E12DF9B1500F9D524 /* TWIOSConnectingViewController.m */; };
+		8B50942812DF9B1500F9D524 /* TWIOSConnectingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B50940F12DF9B1500F9D524 /* TWIOSConnectingViewController.xib */; };
+		8B50942912DF9B1500F9D524 /* TWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50941312DF9B1500F9D524 /* TWServer.m */; };
+		8B50942A12DF9B1500F9D524 /* TWBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50941512DF9B1500F9D524 /* TWBrowser.m */; };
+		8B50942B12DF9B1500F9D524 /* TWConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50941812DF9B1500F9D524 /* TWConnection.m */; };
+		8B50942C12DF9B1500F9D524 /* TWGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50941D12DF9B1500F9D524 /* TWGame.m */; };
+		8B50942D12DF9B1500F9D524 /* TWPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50941F12DF9B1500F9D524 /* TWPlayer.m */; };
+		8B50942E12DF9B1500F9D524 /* TWBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50942112DF9B1500F9D524 /* TWBullet.m */; };
+		8B50943412DF9B3C00F9D524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50943112DF9B3C00F9D524 /* main.m */; };
+		8B5094AD12DFA1B500F9D524 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5094AB12DFA1B500F9D524 /* MainWindow_iPad.xib */; };
+		8B5094AE12DFA1B500F9D524 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5094AC12DFA1B500F9D524 /* MainWindow_iPhone.xib */; };
+		8B5098AC12DFC40700F9D524 /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989112DFC40700F9D524 /* chipmunk.c */; };
+		8B5098AD12DFC40700F9D524 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B50989212DFC40700F9D524 /* CMakeLists.txt */; };
+		8B5098AE12DFC40700F9D524 /* cpConstraint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989412DFC40700F9D524 /* cpConstraint.c */; };
+		8B5098AF12DFC40700F9D524 /* cpDampedRotarySpring.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989512DFC40700F9D524 /* cpDampedRotarySpring.c */; };
+		8B5098B012DFC40700F9D524 /* cpDampedSpring.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989612DFC40700F9D524 /* cpDampedSpring.c */; };
+		8B5098B112DFC40700F9D524 /* cpGearJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989712DFC40700F9D524 /* cpGearJoint.c */; };
+		8B5098B212DFC40700F9D524 /* cpGrooveJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989812DFC40700F9D524 /* cpGrooveJoint.c */; };
+		8B5098B312DFC40700F9D524 /* cpPinJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989912DFC40700F9D524 /* cpPinJoint.c */; };
+		8B5098B412DFC40700F9D524 /* cpPivotJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989A12DFC40700F9D524 /* cpPivotJoint.c */; };
+		8B5098B512DFC40700F9D524 /* cpRatchetJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989B12DFC40700F9D524 /* cpRatchetJoint.c */; };
+		8B5098B612DFC40700F9D524 /* cpRotaryLimitJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989C12DFC40700F9D524 /* cpRotaryLimitJoint.c */; };
+		8B5098B712DFC40700F9D524 /* cpSimpleMotor.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989D12DFC40700F9D524 /* cpSimpleMotor.c */; };
+		8B5098B812DFC40700F9D524 /* cpSlideJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989E12DFC40700F9D524 /* cpSlideJoint.c */; };
+		8B5098B912DFC40700F9D524 /* cpArbiter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50989F12DFC40700F9D524 /* cpArbiter.c */; };
+		8B5098BA12DFC40700F9D524 /* cpArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A012DFC40700F9D524 /* cpArray.c */; };
+		8B5098BB12DFC40700F9D524 /* cpBB.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A112DFC40700F9D524 /* cpBB.c */; };
+		8B5098BC12DFC40700F9D524 /* cpBody.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A212DFC40700F9D524 /* cpBody.c */; };
+		8B5098BD12DFC40700F9D524 /* cpCollision.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A312DFC40700F9D524 /* cpCollision.c */; };
+		8B5098BE12DFC40700F9D524 /* cpHashSet.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A412DFC40700F9D524 /* cpHashSet.c */; };
+		8B5098BF12DFC40700F9D524 /* cpPolyShape.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A512DFC40700F9D524 /* cpPolyShape.c */; };
+		8B5098C012DFC40700F9D524 /* cpShape.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A612DFC40700F9D524 /* cpShape.c */; };
+		8B5098C112DFC40700F9D524 /* cpSpace.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A712DFC40700F9D524 /* cpSpace.c */; };
+		8B5098C212DFC40700F9D524 /* cpSpaceHash.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A812DFC40700F9D524 /* cpSpaceHash.c */; };
+		8B5098C312DFC40700F9D524 /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B5098A912DFC40700F9D524 /* cpVect.c */; };
+		8B5098C412DFC40700F9D524 /* SConscript in Resources */ = {isa = PBXBuildFile; fileRef = 8B5098AB12DFC40700F9D524 /* SConscript */; };
+		9A764DE012DFE06B009836DE /* TWIOSGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A764DDF12DFE06B009836DE /* TWIOSGameView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* TankWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B50940512DF9B1500F9D524 /* TWIOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWIOSAppDelegate.h; sourceTree = "<group>"; };
+		8B50940612DF9B1500F9D524 /* TWIOSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWIOSAppDelegate.m; sourceTree = "<group>"; };
+		8B50940712DF9B1500F9D524 /* TWIOSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWIOSGameViewController.h; sourceTree = "<group>"; };
+		8B50940812DF9B1500F9D524 /* TWIOSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWIOSGameViewController.m; sourceTree = "<group>"; };
+		8B50940912DF9B1500F9D524 /* TWIOSGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWIOSGameViewController.xib; sourceTree = "<group>"; };
+		8B50940A12DF9B1500F9D524 /* TWIOSNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWIOSNewGameViewController.h; sourceTree = "<group>"; };
+		8B50940B12DF9B1500F9D524 /* TWIOSNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWIOSNewGameViewController.m; sourceTree = "<group>"; };
+		8B50940C12DF9B1500F9D524 /* TWIOSNewGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWIOSNewGameViewController.xib; sourceTree = "<group>"; };
+		8B50940D12DF9B1500F9D524 /* TWIOSConnectingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWIOSConnectingViewController.h; sourceTree = "<group>"; };
+		8B50940E12DF9B1500F9D524 /* TWIOSConnectingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWIOSConnectingViewController.m; sourceTree = "<group>"; };
+		8B50940F12DF9B1500F9D524 /* TWIOSConnectingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWIOSConnectingViewController.xib; sourceTree = "<group>"; };
+		8B50941112DF9B1500F9D524 /* TWServerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWServerDelegate.h; sourceTree = "<group>"; };
+		8B50941212DF9B1500F9D524 /* TWServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWServer.h; sourceTree = "<group>"; };
+		8B50941312DF9B1500F9D524 /* TWServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWServer.m; sourceTree = "<group>"; };
+		8B50941412DF9B1500F9D524 /* TWBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBrowser.h; sourceTree = "<group>"; };
+		8B50941512DF9B1500F9D524 /* TWBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBrowser.m; sourceTree = "<group>"; };
+		8B50941612DF9B1500F9D524 /* TWConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWConnectionDelegate.h; sourceTree = "<group>"; };
+		8B50941712DF9B1500F9D524 /* TWConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWConnection.h; sourceTree = "<group>"; };
+		8B50941812DF9B1500F9D524 /* TWConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWConnection.m; sourceTree = "<group>"; };
+		8B50941A12DF9B1500F9D524 /* TWGameDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGameDelegate.h; sourceTree = "<group>"; };
+		8B50941B12DF9B1500F9D524 /* TWCollisionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCollisionTypes.h; sourceTree = "<group>"; };
+		8B50941C12DF9B1500F9D524 /* TWGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGame.h; sourceTree = "<group>"; };
+		8B50941D12DF9B1500F9D524 /* TWGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWGame.m; sourceTree = "<group>"; };
+		8B50941E12DF9B1500F9D524 /* TWPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPlayer.h; sourceTree = "<group>"; };
+		8B50941F12DF9B1500F9D524 /* TWPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPlayer.m; sourceTree = "<group>"; };
+		8B50942012DF9B1500F9D524 /* TWBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBullet.h; sourceTree = "<group>"; };
+		8B50942112DF9B1500F9D524 /* TWBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBullet.m; sourceTree = "<group>"; };
+		8B50943112DF9B3C00F9D524 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
+		8B50943212DF9B3C00F9D524 /* TankWars_iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TankWars_iOS_Prefix.pch; path = iOS/TankWars_iOS_Prefix.pch; sourceTree = "<group>"; };
+		8B50943312DF9B3C00F9D524 /* TankWars_iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "TankWars_iOS-Info.plist"; path = "iOS/TankWars_iOS-Info.plist"; sourceTree = "<group>"; };
+		8B5094AB12DFA1B500F9D524 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
+		8B5094AC12DFA1B500F9D524 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		8B50987412DFC40700F9D524 /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
+		8B50987512DFC40700F9D524 /* chipmunk_ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_ffi.h; sourceTree = "<group>"; };
+		8B50987612DFC40700F9D524 /* chipmunk_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_types.h; sourceTree = "<group>"; };
+		8B50987712DFC40700F9D524 /* chipmunk_unsafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_unsafe.h; sourceTree = "<group>"; };
+		8B50987912DFC40700F9D524 /* cpConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpConstraint.h; sourceTree = "<group>"; };
+		8B50987A12DFC40700F9D524 /* cpDampedRotarySpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpDampedRotarySpring.h; sourceTree = "<group>"; };
+		8B50987B12DFC40700F9D524 /* cpDampedSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpDampedSpring.h; sourceTree = "<group>"; };
+		8B50987C12DFC40700F9D524 /* cpGearJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpGearJoint.h; sourceTree = "<group>"; };
+		8B50987D12DFC40700F9D524 /* cpGrooveJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpGrooveJoint.h; sourceTree = "<group>"; };
+		8B50987E12DFC40700F9D524 /* cpPinJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPinJoint.h; sourceTree = "<group>"; };
+		8B50987F12DFC40700F9D524 /* cpPivotJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPivotJoint.h; sourceTree = "<group>"; };
+		8B50988012DFC40700F9D524 /* cpRatchetJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpRatchetJoint.h; sourceTree = "<group>"; };
+		8B50988112DFC40700F9D524 /* cpRotaryLimitJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpRotaryLimitJoint.h; sourceTree = "<group>"; };
+		8B50988212DFC40700F9D524 /* cpSimpleMotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSimpleMotor.h; sourceTree = "<group>"; };
+		8B50988312DFC40700F9D524 /* cpSlideJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSlideJoint.h; sourceTree = "<group>"; };
+		8B50988412DFC40700F9D524 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		8B50988512DFC40700F9D524 /* cpArbiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpArbiter.h; sourceTree = "<group>"; };
+		8B50988612DFC40700F9D524 /* cpArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpArray.h; sourceTree = "<group>"; };
+		8B50988712DFC40700F9D524 /* cpBB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpBB.h; sourceTree = "<group>"; };
+		8B50988812DFC40700F9D524 /* cpBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpBody.h; sourceTree = "<group>"; };
+		8B50988912DFC40700F9D524 /* cpCollision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpCollision.h; sourceTree = "<group>"; };
+		8B50988A12DFC40700F9D524 /* cpHashSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpHashSet.h; sourceTree = "<group>"; };
+		8B50988B12DFC40700F9D524 /* cpPolyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPolyShape.h; sourceTree = "<group>"; };
+		8B50988C12DFC40700F9D524 /* cpShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpShape.h; sourceTree = "<group>"; };
+		8B50988D12DFC40700F9D524 /* cpSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpace.h; sourceTree = "<group>"; };
+		8B50988E12DFC40700F9D524 /* cpSpaceHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpaceHash.h; sourceTree = "<group>"; };
+		8B50988F12DFC40700F9D524 /* cpVect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpVect.h; sourceTree = "<group>"; };
+		8B50989112DFC40700F9D524 /* chipmunk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chipmunk.c; sourceTree = "<group>"; };
+		8B50989212DFC40700F9D524 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		8B50989412DFC40700F9D524 /* cpConstraint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpConstraint.c; sourceTree = "<group>"; };
+		8B50989512DFC40700F9D524 /* cpDampedRotarySpring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpDampedRotarySpring.c; sourceTree = "<group>"; };
+		8B50989612DFC40700F9D524 /* cpDampedSpring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpDampedSpring.c; sourceTree = "<group>"; };
+		8B50989712DFC40700F9D524 /* cpGearJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpGearJoint.c; sourceTree = "<group>"; };
+		8B50989812DFC40700F9D524 /* cpGrooveJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpGrooveJoint.c; sourceTree = "<group>"; };
+		8B50989912DFC40700F9D524 /* cpPinJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpPinJoint.c; sourceTree = "<group>"; };
+		8B50989A12DFC40700F9D524 /* cpPivotJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpPivotJoint.c; sourceTree = "<group>"; };
+		8B50989B12DFC40700F9D524 /* cpRatchetJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpRatchetJoint.c; sourceTree = "<group>"; };
+		8B50989C12DFC40700F9D524 /* cpRotaryLimitJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpRotaryLimitJoint.c; sourceTree = "<group>"; };
+		8B50989D12DFC40700F9D524 /* cpSimpleMotor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSimpleMotor.c; sourceTree = "<group>"; };
+		8B50989E12DFC40700F9D524 /* cpSlideJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSlideJoint.c; sourceTree = "<group>"; };
+		8B50989F12DFC40700F9D524 /* cpArbiter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpArbiter.c; sourceTree = "<group>"; };
+		8B5098A012DFC40700F9D524 /* cpArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpArray.c; sourceTree = "<group>"; };
+		8B5098A112DFC40700F9D524 /* cpBB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpBB.c; sourceTree = "<group>"; };
+		8B5098A212DFC40700F9D524 /* cpBody.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpBody.c; sourceTree = "<group>"; };
+		8B5098A312DFC40700F9D524 /* cpCollision.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpCollision.c; sourceTree = "<group>"; };
+		8B5098A412DFC40700F9D524 /* cpHashSet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpHashSet.c; sourceTree = "<group>"; };
+		8B5098A512DFC40700F9D524 /* cpPolyShape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpPolyShape.c; sourceTree = "<group>"; };
+		8B5098A612DFC40700F9D524 /* cpShape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpShape.c; sourceTree = "<group>"; };
+		8B5098A712DFC40700F9D524 /* cpSpace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSpace.c; sourceTree = "<group>"; };
+		8B5098A812DFC40700F9D524 /* cpSpaceHash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSpaceHash.c; sourceTree = "<group>"; };
+		8B5098A912DFC40700F9D524 /* cpVect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpVect.c; sourceTree = "<group>"; };
+		8B5098AA12DFC40700F9D524 /* prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prime.h; sourceTree = "<group>"; };
+		8B5098AB12DFC40700F9D524 /* SConscript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SConscript; sourceTree = "<group>"; };
+		9A764DDE12DFE06B009836DE /* TWIOSGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWIOSGameView.h; sourceTree = "<group>"; };
+		9A764DDF12DFE06B009836DE /* TWIOSGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWIOSGameView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* TankWars.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				8B50940312DF9B0300F9D524 /* Classes */,
+				8B50943F12DF9C1900F9D524 /* External */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8B50943112DF9B3C00F9D524 /* main.m */,
+				8B50943212DF9B3C00F9D524 /* TankWars_iOS_Prefix.pch */,
+				8B50943312DF9B3C00F9D524 /* TankWars_iOS-Info.plist */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B50940312DF9B0300F9D524 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B50940412DF9B1500F9D524 /* iOS */,
+				8B50941912DF9B1500F9D524 /* Game */,
+				8B50941012DF9B1500F9D524 /* Networking */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8B50940412DF9B1500F9D524 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B5094AB12DFA1B500F9D524 /* MainWindow_iPad.xib */,
+				8B5094AC12DFA1B500F9D524 /* MainWindow_iPhone.xib */,
+				8B50940512DF9B1500F9D524 /* TWIOSAppDelegate.h */,
+				8B50940612DF9B1500F9D524 /* TWIOSAppDelegate.m */,
+				8B50940712DF9B1500F9D524 /* TWIOSGameViewController.h */,
+				8B50940812DF9B1500F9D524 /* TWIOSGameViewController.m */,
+				8B50940912DF9B1500F9D524 /* TWIOSGameViewController.xib */,
+				8B50940A12DF9B1500F9D524 /* TWIOSNewGameViewController.h */,
+				8B50940B12DF9B1500F9D524 /* TWIOSNewGameViewController.m */,
+				8B50940C12DF9B1500F9D524 /* TWIOSNewGameViewController.xib */,
+				8B50940D12DF9B1500F9D524 /* TWIOSConnectingViewController.h */,
+				8B50940E12DF9B1500F9D524 /* TWIOSConnectingViewController.m */,
+				8B50940F12DF9B1500F9D524 /* TWIOSConnectingViewController.xib */,
+				9A764DDE12DFE06B009836DE /* TWIOSGameView.h */,
+				9A764DDF12DFE06B009836DE /* TWIOSGameView.m */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8B50941012DF9B1500F9D524 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8B50941112DF9B1500F9D524 /* TWServerDelegate.h */,
+				8B50941212DF9B1500F9D524 /* TWServer.h */,
+				8B50941312DF9B1500F9D524 /* TWServer.m */,
+				8B50941412DF9B1500F9D524 /* TWBrowser.h */,
+				8B50941512DF9B1500F9D524 /* TWBrowser.m */,
+				8B50941612DF9B1500F9D524 /* TWConnectionDelegate.h */,
+				8B50941712DF9B1500F9D524 /* TWConnection.h */,
+				8B50941812DF9B1500F9D524 /* TWConnection.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		8B50941912DF9B1500F9D524 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				8B50941A12DF9B1500F9D524 /* TWGameDelegate.h */,
+				8B50941B12DF9B1500F9D524 /* TWCollisionTypes.h */,
+				8B50941C12DF9B1500F9D524 /* TWGame.h */,
+				8B50941D12DF9B1500F9D524 /* TWGame.m */,
+				8B50941E12DF9B1500F9D524 /* TWPlayer.h */,
+				8B50941F12DF9B1500F9D524 /* TWPlayer.m */,
+				8B50942012DF9B1500F9D524 /* TWBullet.h */,
+				8B50942112DF9B1500F9D524 /* TWBullet.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		8B50943F12DF9C1900F9D524 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				8B5097DF12DFC27400F9D524 /* chipmunk */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		8B5097DF12DFC27400F9D524 /* chipmunk */ = {
+			isa = PBXGroup;
+			children = (
+				8B50987212DFC40700F9D524 /* include */,
+				8B50989012DFC40700F9D524 /* src */,
+			);
+			name = chipmunk;
+			sourceTree = "<group>";
+		};
+		8B50987212DFC40700F9D524 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8B50987312DFC40700F9D524 /* chipmunk */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		8B50987312DFC40700F9D524 /* chipmunk */ = {
+			isa = PBXGroup;
+			children = (
+				8B50987412DFC40700F9D524 /* chipmunk.h */,
+				8B50987512DFC40700F9D524 /* chipmunk_ffi.h */,
+				8B50987612DFC40700F9D524 /* chipmunk_types.h */,
+				8B50987712DFC40700F9D524 /* chipmunk_unsafe.h */,
+				8B50987812DFC40700F9D524 /* constraints */,
+				8B50988512DFC40700F9D524 /* cpArbiter.h */,
+				8B50988612DFC40700F9D524 /* cpArray.h */,
+				8B50988712DFC40700F9D524 /* cpBB.h */,
+				8B50988812DFC40700F9D524 /* cpBody.h */,
+				8B50988912DFC40700F9D524 /* cpCollision.h */,
+				8B50988A12DFC40700F9D524 /* cpHashSet.h */,
+				8B50988B12DFC40700F9D524 /* cpPolyShape.h */,
+				8B50988C12DFC40700F9D524 /* cpShape.h */,
+				8B50988D12DFC40700F9D524 /* cpSpace.h */,
+				8B50988E12DFC40700F9D524 /* cpSpaceHash.h */,
+				8B50988F12DFC40700F9D524 /* cpVect.h */,
+			);
+			path = chipmunk;
+			sourceTree = "<group>";
+		};
+		8B50987812DFC40700F9D524 /* constraints */ = {
+			isa = PBXGroup;
+			children = (
+				8B50987912DFC40700F9D524 /* cpConstraint.h */,
+				8B50987A12DFC40700F9D524 /* cpDampedRotarySpring.h */,
+				8B50987B12DFC40700F9D524 /* cpDampedSpring.h */,
+				8B50987C12DFC40700F9D524 /* cpGearJoint.h */,
+				8B50987D12DFC40700F9D524 /* cpGrooveJoint.h */,
+				8B50987E12DFC40700F9D524 /* cpPinJoint.h */,
+				8B50987F12DFC40700F9D524 /* cpPivotJoint.h */,
+				8B50988012DFC40700F9D524 /* cpRatchetJoint.h */,
+				8B50988112DFC40700F9D524 /* cpRotaryLimitJoint.h */,
+				8B50988212DFC40700F9D524 /* cpSimpleMotor.h */,
+				8B50988312DFC40700F9D524 /* cpSlideJoint.h */,
+				8B50988412DFC40700F9D524 /* util.h */,
+			);
+			path = constraints;
+			sourceTree = "<group>";
+		};
+		8B50989012DFC40700F9D524 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8B50989112DFC40700F9D524 /* chipmunk.c */,
+				8B50989212DFC40700F9D524 /* CMakeLists.txt */,
+				8B50989312DFC40700F9D524 /* constraints */,
+				8B50989F12DFC40700F9D524 /* cpArbiter.c */,
+				8B5098A012DFC40700F9D524 /* cpArray.c */,
+				8B5098A112DFC40700F9D524 /* cpBB.c */,
+				8B5098A212DFC40700F9D524 /* cpBody.c */,
+				8B5098A312DFC40700F9D524 /* cpCollision.c */,
+				8B5098A412DFC40700F9D524 /* cpHashSet.c */,
+				8B5098A512DFC40700F9D524 /* cpPolyShape.c */,
+				8B5098A612DFC40700F9D524 /* cpShape.c */,
+				8B5098A712DFC40700F9D524 /* cpSpace.c */,
+				8B5098A812DFC40700F9D524 /* cpSpaceHash.c */,
+				8B5098A912DFC40700F9D524 /* cpVect.c */,
+				8B5098AA12DFC40700F9D524 /* prime.h */,
+				8B5098AB12DFC40700F9D524 /* SConscript */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		8B50989312DFC40700F9D524 /* constraints */ = {
+			isa = PBXGroup;
+			children = (
+				8B50989412DFC40700F9D524 /* cpConstraint.c */,
+				8B50989512DFC40700F9D524 /* cpDampedRotarySpring.c */,
+				8B50989612DFC40700F9D524 /* cpDampedSpring.c */,
+				8B50989712DFC40700F9D524 /* cpGearJoint.c */,
+				8B50989812DFC40700F9D524 /* cpGrooveJoint.c */,
+				8B50989912DFC40700F9D524 /* cpPinJoint.c */,
+				8B50989A12DFC40700F9D524 /* cpPivotJoint.c */,
+				8B50989B12DFC40700F9D524 /* cpRatchetJoint.c */,
+				8B50989C12DFC40700F9D524 /* cpRotaryLimitJoint.c */,
+				8B50989D12DFC40700F9D524 /* cpSimpleMotor.c */,
+				8B50989E12DFC40700F9D524 /* cpSlideJoint.c */,
+			);
+			path = constraints;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* TankWars-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TankWars-iOS" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TankWars-iOS";
+			productName = "TanksWars-iOS";
+			productReference = 1D6058910D05DD3D006BFB54 /* TankWars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Cory Kilger";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TankWars-iOS" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* TankWars-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B50942412DF9B1500F9D524 /* TWIOSGameViewController.xib in Resources */,
+				8B50942612DF9B1500F9D524 /* TWIOSNewGameViewController.xib in Resources */,
+				8B50942812DF9B1500F9D524 /* TWIOSConnectingViewController.xib in Resources */,
+				8B5094AD12DFA1B500F9D524 /* MainWindow_iPad.xib in Resources */,
+				8B5094AE12DFA1B500F9D524 /* MainWindow_iPhone.xib in Resources */,
+				8B5098AD12DFC40700F9D524 /* CMakeLists.txt in Resources */,
+				8B5098C412DFC40700F9D524 /* SConscript in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B50942212DF9B1500F9D524 /* TWIOSAppDelegate.m in Sources */,
+				8B50942312DF9B1500F9D524 /* TWIOSGameViewController.m in Sources */,
+				8B50942512DF9B1500F9D524 /* TWIOSNewGameViewController.m in Sources */,
+				8B50942712DF9B1500F9D524 /* TWIOSConnectingViewController.m in Sources */,
+				8B50942912DF9B1500F9D524 /* TWServer.m in Sources */,
+				8B50942A12DF9B1500F9D524 /* TWBrowser.m in Sources */,
+				8B50942B12DF9B1500F9D524 /* TWConnection.m in Sources */,
+				8B50942C12DF9B1500F9D524 /* TWGame.m in Sources */,
+				8B50942D12DF9B1500F9D524 /* TWPlayer.m in Sources */,
+				8B50942E12DF9B1500F9D524 /* TWBullet.m in Sources */,
+				8B50943412DF9B3C00F9D524 /* main.m in Sources */,
+				8B5098AC12DFC40700F9D524 /* chipmunk.c in Sources */,
+				8B5098AE12DFC40700F9D524 /* cpConstraint.c in Sources */,
+				8B5098AF12DFC40700F9D524 /* cpDampedRotarySpring.c in Sources */,
+				8B5098B012DFC40700F9D524 /* cpDampedSpring.c in Sources */,
+				8B5098B112DFC40700F9D524 /* cpGearJoint.c in Sources */,
+				8B5098B212DFC40700F9D524 /* cpGrooveJoint.c in Sources */,
+				8B5098B312DFC40700F9D524 /* cpPinJoint.c in Sources */,
+				8B5098B412DFC40700F9D524 /* cpPivotJoint.c in Sources */,
+				8B5098B512DFC40700F9D524 /* cpRatchetJoint.c in Sources */,
+				8B5098B612DFC40700F9D524 /* cpRotaryLimitJoint.c in Sources */,
+				8B5098B712DFC40700F9D524 /* cpSimpleMotor.c in Sources */,
+				8B5098B812DFC40700F9D524 /* cpSlideJoint.c in Sources */,
+				8B5098B912DFC40700F9D524 /* cpArbiter.c in Sources */,
+				8B5098BA12DFC40700F9D524 /* cpArray.c in Sources */,
+				8B5098BB12DFC40700F9D524 /* cpBB.c in Sources */,
+				8B5098BC12DFC40700F9D524 /* cpBody.c in Sources */,
+				8B5098BD12DFC40700F9D524 /* cpCollision.c in Sources */,
+				8B5098BE12DFC40700F9D524 /* cpHashSet.c in Sources */,
+				8B5098BF12DFC40700F9D524 /* cpPolyShape.c in Sources */,
+				8B5098C012DFC40700F9D524 /* cpShape.c in Sources */,
+				8B5098C112DFC40700F9D524 /* cpSpace.c in Sources */,
+				8B5098C212DFC40700F9D524 /* cpSpaceHash.c in Sources */,
+				8B5098C312DFC40700F9D524 /* cpVect.c in Sources */,
+				9A764DE012DFE06B009836DE /* TWIOSGameView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/TankWars_iOS_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "iOS/TankWars_iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/External\"",
+				);
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fobjc-nonfragile-abi2",
+				);
+				PRODUCT_NAME = TankWars;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/TankWars_iOS_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "iOS/TankWars_iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/External\"",
+				);
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fobjc-nonfragile-abi2",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
+				PRODUCT_NAME = TankWars;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TankWars-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TankWars-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

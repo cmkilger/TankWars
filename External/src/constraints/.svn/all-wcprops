@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints
+END
+cpDampedSpring.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpDampedSpring.c
+END
+cpDampedRotarySpring.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpDampedRotarySpring.c
+END
+cpRatchetJoint.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpRatchetJoint.c
+END
+cpGearJoint.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpGearJoint.c
+END
+cpRotaryLimitJoint.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpRotaryLimitJoint.c
+END
+cpConstraint.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpConstraint.c
+END
+cpSlideJoint.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpSlideJoint.c
+END
+cpGrooveJoint.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpGrooveJoint.c
+END
+cpPivotJoint.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpPivotJoint.c
+END
+cpPinJoint.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpPinJoint.c
+END
+cpSimpleMotor.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/380/tags/Chipmunk-5.1.0/src/constraints/cpSimpleMotor.c
+END

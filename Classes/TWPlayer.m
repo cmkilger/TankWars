@@ -17,11 +17,6 @@
 #define BULLET_VEL MAX_VEL*4.0
 #define COOLDOWN 0.25;
 
-typedef enum {
-	TWPlayerPacketTypeIdentification,
-} TWPlayerPacketType;
-
-
 @interface TWPlayer ()
 
 @property (nonatomic, retain) NSMutableData * savedData;
@@ -38,15 +33,30 @@ typedef enum {
 - (id) initWithName:(NSString *)newName {
 	if (!(self = [super init]))
 		return nil;
+	
 	self.name = newName;
 	self.bullets = [NSMutableArray array];
+	
+	CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+	self.uuid = (NSString *) CFUUIDCreateString(NULL, uuidRef);
+	CFRelease(uuidRef);
+	
 	return self;
 }
 
-- (id) initWithConnection:(TWConnection *)connection {
+- (id) initWithConnection:(TWConnection *)newConnection {
 	if (!(self = [super init]))
 		return nil;
 	self.savedData = [NSMutableData data];
+	self.connection = newConnection;
+	connection.delegate = self;
+	
+	CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+	self.uuid = (NSString *) CFUUIDCreateString(NULL, uuidRef);
+	CFRelease(uuidRef);
+	
+	[connection sendData:[self playerUUID]];
+	
 	return self;
 }
 
@@ -78,7 +88,8 @@ typedef enum {
 }
 
 - (void) setLocation:(CGPoint)loc {
-	cpBodySetPos(body, cpv(loc.x, loc.y));
+	if (body)
+		cpBodySetPos(body, cpv(loc.x, loc.y));
 }
 
 - (CGFloat) rotation {
@@ -86,7 +97,8 @@ typedef enum {
 }
 
 - (void) setRotation:(CGFloat)rot {
-	cpBodySetAngle(body, rot);
+	if (body)
+		cpBodySetAngle(body, rot);
 }
 
 - (CGFloat) velocity {
@@ -94,7 +106,8 @@ typedef enum {
 }
 
 - (void) setVelocity:(CGFloat)vel {
-	cpBodySetVel(body, cpvmult(cpvnormalize_safe(cpBodyGetRot(body)), vel));
+	if (body)
+		cpBodySetVel(body, cpvmult(cpvnormalize_safe(cpBodyGetRot(body)), vel));
 }
 
 #pragma mark -
@@ -136,6 +149,7 @@ typedef enum {
 	}
 	for (TWBullet * bullet in bullets)
 		[bullet update:dt];
+	
 }
 
 - (void) hit {
@@ -143,8 +157,10 @@ typedef enum {
 }
 
 #pragma mark -
+#pragma mark Connection stuff
 
 // !!!: This can be done in the presentation
+// This data is received from the client.  If we are a client this is never used.
 - (void) connection:(TWConnection *)connection didReceiveData:(NSData *)data {
 	[savedData appendData:data];
 	
@@ -157,23 +173,29 @@ typedef enum {
 	while (index < length) {
 		packetIndex = index;
 		
-		uint8_t type = bytes[++index];
+		uint8_t type = bytes[index++];
 		
 		UInt32 size;
-		if (index+sizeof(NSUInteger) >= length)
+		if (index+sizeof(UInt32) > length)
 			goto FAILED;
-		memcpy(&size, &(bytes[index]), sizeof(NSUInteger));
-		size = EndianU32_BtoN(size);
-		index += sizeof(NSUInteger);
+		memcpy(&size, &(bytes[index]), sizeof(UInt32));
+		size = CFSwapInt32BigToHost(size);
+		index += sizeof(UInt32);
 		
-		if (index+size >= length)
+		if (index+size > length)
 			goto FAILED;
 		NSData * content = [NSData dataWithBytes:&(bytes[index]) length:size];
+		index += [content length];
 		
 		switch (type) {
-			case TWPlayerPacketTypeIdentification: {
-				self.name = [[[NSString alloc] initWithData:content encoding:NSUTF8StringEncoding] autorelease];
+			case TWPlayerPacketTypeName: {
+				self.playerName = content;
+				NSLog(@"Loaded: %@ <%@>", name, uuid);
 				[game playerDidLoad:self];
+			} break;
+				
+			case TWPlayerPacketTypeLocation: {
+				self.playerLocation = content;
 			} break;
 				
 			default:
@@ -191,7 +213,111 @@ FAILED:
 }
 
 - (void) connectionDidEnd:(TWConnection *)connection {
+	[game playerDidDisconnect:self];
+}
+
+#pragma mark -
+
+- (NSData *) playerUUID {
+	NSMutableData * data = [NSMutableData data];
 	
+	UInt8 type = TWGamePacketTypeUUID;
+	NSData * content = [uuid dataUsingEncoding:NSUTF8StringEncoding];
+	UInt32 length = [content length];
+	UInt32 size = CFSwapInt32HostToBig(length);
+	
+	[data appendBytes:&type length:sizeof(UInt8)];
+	[data appendBytes:&size length:sizeof(UInt32)];
+	[data appendData:content];
+	
+	return data;
+}
+
+- (void) setPlayerUUID:(NSData *)data {
+	self.uuid = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+}
+
+#pragma mark -
+
+- (NSData *) playerName {
+	NSMutableData * data = [NSMutableData data];
+	
+	UInt8 type = TWPlayerPacketTypeName;
+	NSData * content = [name dataUsingEncoding:NSUTF8StringEncoding];
+	UInt32 length = [content length];
+	UInt32 size = CFSwapInt32HostToBig(length);
+	
+	[data appendBytes:&type length:sizeof(UInt8)];
+	[data appendBytes:&size length:sizeof(UInt32)];
+	[data appendData:content];
+	
+	return data;
+}
+
+- (void) setPlayerName:(NSData *)data {
+	self.name = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+}
+
+#pragma mark -
+
+- (NSData *) playerLocation {
+	NSMutableData * data = [NSMutableData data];
+	
+	UInt8 type = TWPlayerPacketTypeLocation;
+	
+	CGPoint aLocation = self.location;
+	CGFloat aRotation = self.rotation;
+	CGFloat aVelocity = self.velocity;
+	
+	NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:
+						   [NSNumber numberWithFloat:aLocation.x], @"locationX",
+						   [NSNumber numberWithFloat:aLocation.y], @"locationY",
+						   [NSNumber numberWithFloat:aRotation], @"rotation",
+						   [NSNumber numberWithFloat:aVelocity], @"velocity",
+						   nil];
+	
+	NSData * content = [NSKeyedArchiver archivedDataWithRootObject:dict];
+	
+	UInt32 length = [content length];
+	UInt32 size = CFSwapInt32HostToBig(length);
+	
+	[data appendBytes:&type length:sizeof(UInt8)];
+	[data appendBytes:&size length:sizeof(UInt32)];
+	[data appendData:content];
+	
+	return data;
+}
+
+- (void) setPlayerLocation:(NSData *)data {
+	NSDictionary * dict = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+		
+	self.location = CGPointMake([[dict objectForKey:@"locationX"] floatValue], [[dict objectForKey:@"locationY"] floatValue]);
+	self.rotation = [[dict objectForKey:@"rotation"] floatValue];
+	self.velocity = [[dict objectForKey:@"velocity"] floatValue];
+}
+
+#pragma mark -
+#pragma mark Player Info
+
+- (NSDictionary *) playerInfo {
+	CGPoint aLocation = self.location;
+	CGFloat aRotation = self.rotation;
+	CGFloat aVelocity = self.velocity;
+	
+	NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:
+						   [NSNumber numberWithFloat:aLocation.x], @"locationX",
+						   [NSNumber numberWithFloat:aLocation.y], @"locationY",
+						   [NSNumber numberWithFloat:aRotation], @"rotation",
+						   [NSNumber numberWithFloat:aVelocity], @"velocity",
+						   nil];
+	
+	return dict;
+}
+
+- (void) setPlayerInfo:(NSDictionary *)dict {
+	self.location = CGPointMake([[dict objectForKey:@"locationX"] floatValue], [[dict objectForKey:@"locationY"] floatValue]);
+	self.rotation = [[dict objectForKey:@"rotation"] floatValue];
+	self.velocity = [[dict objectForKey:@"velocity"] floatValue];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "TWIOSGameViewController.h"
+#import "TWIOSGameView.h"
 
 
 @implementation TWIOSGameViewController
@@ -22,13 +23,23 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		gameView.transform = CGAffineTransformMakeScale(1.06666, 1.2);
+	}
+	else {
+		gameView.transform = CGAffineTransformMakeScale(0.5, 0.5);
+	}
 }
-*/
 
+
+- (void) setGame:(TWGame *)newGame {
+	gameView.game = game;
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.
@@ -55,5 +66,10 @@
     [super dealloc];
 }
 
+#pragma mark -
+
+- (void) update {
+	
+}
 
 @end

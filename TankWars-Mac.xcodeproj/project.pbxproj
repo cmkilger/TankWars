@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B5093A312DF991B00F9D524 /* TWMacAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50939E12DF991B00F9D524 /* TWMacAppDelegate.m */; };
+		8B5093A412DF991B00F9D524 /* TWMacPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093A012DF991B00F9D524 /* TWMacPlayerItem.m */; };
+		8B5093A512DF991B00F9D524 /* TWMacGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093A212DF991B00F9D524 /* TWMacGameView.m */; };
+		8B5093B812DF992300F9D524 /* TWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093A912DF992300F9D524 /* TWServer.m */; };
+		8B5093B912DF992300F9D524 /* TWBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093AB12DF992300F9D524 /* TWBrowser.m */; };
+		8B5093BA12DF992300F9D524 /* TWConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093AE12DF992300F9D524 /* TWConnection.m */; };
+		8B5093BB12DF992300F9D524 /* TWGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093B312DF992300F9D524 /* TWGame.m */; };
+		8B5093BC12DF992300F9D524 /* TWPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093B512DF992300F9D524 /* TWPlayer.m */; };
+		8B5093BD12DF992300F9D524 /* TWBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5093B712DF992300F9D524 /* TWBullet.m */; };
+		8B5093DF12DF997F00F9D524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5093DE12DF997F00F9D524 /* MainMenu.xib */; };
+		8B50992012DFC4CF00F9D524 /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990512DFC4CF00F9D524 /* chipmunk.c */; };
+		8B50992112DFC4CF00F9D524 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B50990612DFC4CF00F9D524 /* CMakeLists.txt */; };
+		8B50992212DFC4CF00F9D524 /* cpConstraint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990812DFC4CF00F9D524 /* cpConstraint.c */; };
+		8B50992312DFC4CF00F9D524 /* cpDampedRotarySpring.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990912DFC4CF00F9D524 /* cpDampedRotarySpring.c */; };
+		8B50992412DFC4CF00F9D524 /* cpDampedSpring.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990A12DFC4CF00F9D524 /* cpDampedSpring.c */; };
+		8B50992512DFC4CF00F9D524 /* cpGearJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990B12DFC4CF00F9D524 /* cpGearJoint.c */; };
+		8B50992612DFC4CF00F9D524 /* cpGrooveJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990C12DFC4CF00F9D524 /* cpGrooveJoint.c */; };
+		8B50992712DFC4CF00F9D524 /* cpPinJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990D12DFC4CF00F9D524 /* cpPinJoint.c */; };
+		8B50992812DFC4CF00F9D524 /* cpPivotJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990E12DFC4CF00F9D524 /* cpPivotJoint.c */; };
+		8B50992912DFC4CF00F9D524 /* cpRatchetJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50990F12DFC4CF00F9D524 /* cpRatchetJoint.c */; };
+		8B50992A12DFC4CF00F9D524 /* cpRotaryLimitJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991012DFC4CF00F9D524 /* cpRotaryLimitJoint.c */; };
+		8B50992B12DFC4CF00F9D524 /* cpSimpleMotor.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991112DFC4CF00F9D524 /* cpSimpleMotor.c */; };
+		8B50992C12DFC4CF00F9D524 /* cpSlideJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991212DFC4CF00F9D524 /* cpSlideJoint.c */; };
+		8B50992D12DFC4CF00F9D524 /* cpArbiter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991312DFC4CF00F9D524 /* cpArbiter.c */; };
+		8B50992E12DFC4CF00F9D524 /* cpArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991412DFC4CF00F9D524 /* cpArray.c */; };
+		8B50992F12DFC4CF00F9D524 /* cpBB.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991512DFC4CF00F9D524 /* cpBB.c */; };
+		8B50993012DFC4CF00F9D524 /* cpBody.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991612DFC4CF00F9D524 /* cpBody.c */; };
+		8B50993112DFC4CF00F9D524 /* cpCollision.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991712DFC4CF00F9D524 /* cpCollision.c */; };
+		8B50993212DFC4CF00F9D524 /* cpHashSet.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991812DFC4CF00F9D524 /* cpHashSet.c */; };
+		8B50993312DFC4CF00F9D524 /* cpPolyShape.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991912DFC4CF00F9D524 /* cpPolyShape.c */; };
+		8B50993412DFC4CF00F9D524 /* cpShape.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991A12DFC4CF00F9D524 /* cpShape.c */; };
+		8B50993512DFC4CF00F9D524 /* cpSpace.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991B12DFC4CF00F9D524 /* cpSpace.c */; };
+		8B50993612DFC4CF00F9D524 /* cpSpaceHash.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991C12DFC4CF00F9D524 /* cpSpaceHash.c */; };
+		8B50993712DFC4CF00F9D524 /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B50991D12DFC4CF00F9D524 /* cpVect.c */; };
+		8B50993812DFC4CF00F9D524 /* SConscript in Resources */ = {isa = PBXBuildFile; fileRef = 8B50991F12DFC4CF00F9D524 /* SConscript */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		256AC3F00F4B6AF500CF3369 /* TankWars_Mac_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TankWars_Mac_Prefix.pch; path = Mac/TankWars_Mac_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Mac/main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8B50939D12DF991B00F9D524 /* TWMacAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWMacAppDelegate.h; path = Classes/TWMacAppDelegate.h; sourceTree = "<group>"; };
+		8B50939E12DF991B00F9D524 /* TWMacAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWMacAppDelegate.m; path = Classes/TWMacAppDelegate.m; sourceTree = "<group>"; };
+		8B50939F12DF991B00F9D524 /* TWMacPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWMacPlayerItem.h; path = Classes/TWMacPlayerItem.h; sourceTree = "<group>"; };
+		8B5093A012DF991B00F9D524 /* TWMacPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWMacPlayerItem.m; path = Classes/TWMacPlayerItem.m; sourceTree = "<group>"; };
+		8B5093A112DF991B00F9D524 /* TWMacGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWMacGameView.h; path = Classes/TWMacGameView.h; sourceTree = "<group>"; };
+		8B5093A212DF991B00F9D524 /* TWMacGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWMacGameView.m; path = Classes/TWMacGameView.m; sourceTree = "<group>"; };
+		8B5093A712DF992300F9D524 /* TWServerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWServerDelegate.h; path = Classes/TWServerDelegate.h; sourceTree = "<group>"; };
+		8B5093A812DF992300F9D524 /* TWServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWServer.h; path = Classes/TWServer.h; sourceTree = "<group>"; };
+		8B5093A912DF992300F9D524 /* TWServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWServer.m; path = Classes/TWServer.m; sourceTree = "<group>"; };
+		8B5093AA12DF992300F9D524 /* TWBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWBrowser.h; path = Classes/TWBrowser.h; sourceTree = "<group>"; };
+		8B5093AB12DF992300F9D524 /* TWBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWBrowser.m; path = Classes/TWBrowser.m; sourceTree = "<group>"; };
+		8B5093AC12DF992300F9D524 /* TWConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWConnectionDelegate.h; path = Classes/TWConnectionDelegate.h; sourceTree = "<group>"; };
+		8B5093AD12DF992300F9D524 /* TWConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWConnection.h; path = Classes/TWConnection.h; sourceTree = "<group>"; };
+		8B5093AE12DF992300F9D524 /* TWConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWConnection.m; path = Classes/TWConnection.m; sourceTree = "<group>"; };
+		8B5093B012DF992300F9D524 /* TWGameDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWGameDelegate.h; path = Classes/TWGameDelegate.h; sourceTree = "<group>"; };
+		8B5093B112DF992300F9D524 /* TWCollisionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWCollisionTypes.h; path = Classes/TWCollisionTypes.h; sourceTree = "<group>"; };
+		8B5093B212DF992300F9D524 /* TWGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWGame.h; path = Classes/TWGame.h; sourceTree = "<group>"; };
+		8B5093B312DF992300F9D524 /* TWGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWGame.m; path = Classes/TWGame.m; sourceTree = "<group>"; };
+		8B5093B412DF992300F9D524 /* TWPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWPlayer.h; path = Classes/TWPlayer.h; sourceTree = "<group>"; };
+		8B5093B512DF992300F9D524 /* TWPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWPlayer.m; path = Classes/TWPlayer.m; sourceTree = "<group>"; };
+		8B5093B612DF992300F9D524 /* TWBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWBullet.h; path = Classes/TWBullet.h; sourceTree = "<group>"; };
+		8B5093B712DF992300F9D524 /* TWBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWBullet.m; path = Classes/TWBullet.m; sourceTree = "<group>"; };
+		8B5093DE12DF997F00F9D524 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = Classes/MainMenu.xib; sourceTree = "<group>"; };
+		8B5094DE12DFA50F00F9D524 /* TWBrowserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWBrowserDelegate.h; path = Classes/TWBrowserDelegate.h; sourceTree = "<group>"; };
+		8B5098E812DFC4CF00F9D524 /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
+		8B5098E912DFC4CF00F9D524 /* chipmunk_ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_ffi.h; sourceTree = "<group>"; };
+		8B5098EA12DFC4CF00F9D524 /* chipmunk_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_types.h; sourceTree = "<group>"; };
+		8B5098EB12DFC4CF00F9D524 /* chipmunk_unsafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_unsafe.h; sourceTree = "<group>"; };
+		8B5098ED12DFC4CF00F9D524 /* cpConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpConstraint.h; sourceTree = "<group>"; };
+		8B5098EE12DFC4CF00F9D524 /* cpDampedRotarySpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpDampedRotarySpring.h; sourceTree = "<group>"; };
+		8B5098EF12DFC4CF00F9D524 /* cpDampedSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpDampedSpring.h; sourceTree = "<group>"; };
+		8B5098F012DFC4CF00F9D524 /* cpGearJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpGearJoint.h; sourceTree = "<group>"; };
+		8B5098F112DFC4CF00F9D524 /* cpGrooveJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpGrooveJoint.h; sourceTree = "<group>"; };
+		8B5098F212DFC4CF00F9D524 /* cpPinJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPinJoint.h; sourceTree = "<group>"; };
+		8B5098F312DFC4CF00F9D524 /* cpPivotJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPivotJoint.h; sourceTree = "<group>"; };
+		8B5098F412DFC4CF00F9D524 /* cpRatchetJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpRatchetJoint.h; sourceTree = "<group>"; };
+		8B5098F512DFC4CF00F9D524 /* cpRotaryLimitJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpRotaryLimitJoint.h; sourceTree = "<group>"; };
+		8B5098F612DFC4CF00F9D524 /* cpSimpleMotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSimpleMotor.h; sourceTree = "<group>"; };
+		8B5098F712DFC4CF00F9D524 /* cpSlideJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSlideJoint.h; sourceTree = "<group>"; };
+		8B5098F812DFC4CF00F9D524 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		8B5098F912DFC4CF00F9D524 /* cpArbiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpArbiter.h; sourceTree = "<group>"; };
+		8B5098FA12DFC4CF00F9D524 /* cpArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpArray.h; sourceTree = "<group>"; };
+		8B5098FB12DFC4CF00F9D524 /* cpBB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpBB.h; sourceTree = "<group>"; };
+		8B5098FC12DFC4CF00F9D524 /* cpBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpBody.h; sourceTree = "<group>"; };
+		8B5098FD12DFC4CF00F9D524 /* cpCollision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpCollision.h; sourceTree = "<group>"; };
+		8B5098FE12DFC4CF00F9D524 /* cpHashSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpHashSet.h; sourceTree = "<group>"; };
+		8B5098FF12DFC4CF00F9D524 /* cpPolyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPolyShape.h; sourceTree = "<group>"; };
+		8B50990012DFC4CF00F9D524 /* cpShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpShape.h; sourceTree = "<group>"; };
+		8B50990112DFC4CF00F9D524 /* cpSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpace.h; sourceTree = "<group>"; };
+		8B50990212DFC4CF00F9D524 /* cpSpaceHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpaceHash.h; sourceTree = "<group>"; };
+		8B50990312DFC4CF00F9D524 /* cpVect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpVect.h; sourceTree = "<group>"; };
+		8B50990512DFC4CF00F9D524 /* chipmunk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chipmunk.c; sourceTree = "<group>"; };
+		8B50990612DFC4CF00F9D524 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		8B50990812DFC4CF00F9D524 /* cpConstraint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpConstraint.c; sourceTree = "<group>"; };
+		8B50990912DFC4CF00F9D524 /* cpDampedRotarySpring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpDampedRotarySpring.c; sourceTree = "<group>"; };
+		8B50990A12DFC4CF00F9D524 /* cpDampedSpring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpDampedSpring.c; sourceTree = "<group>"; };
+		8B50990B12DFC4CF00F9D524 /* cpGearJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpGearJoint.c; sourceTree = "<group>"; };
+		8B50990C12DFC4CF00F9D524 /* cpGrooveJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpGrooveJoint.c; sourceTree = "<group>"; };
+		8B50990D12DFC4CF00F9D524 /* cpPinJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpPinJoint.c; sourceTree = "<group>"; };
+		8B50990E12DFC4CF00F9D524 /* cpPivotJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpPivotJoint.c; sourceTree = "<group>"; };
+		8B50990F12DFC4CF00F9D524 /* cpRatchetJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpRatchetJoint.c; sourceTree = "<group>"; };
+		8B50991012DFC4CF00F9D524 /* cpRotaryLimitJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpRotaryLimitJoint.c; sourceTree = "<group>"; };
+		8B50991112DFC4CF00F9D524 /* cpSimpleMotor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSimpleMotor.c; sourceTree = "<group>"; };
+		8B50991212DFC4CF00F9D524 /* cpSlideJoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSlideJoint.c; sourceTree = "<group>"; };
+		8B50991312DFC4CF00F9D524 /* cpArbiter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpArbiter.c; sourceTree = "<group>"; };
+		8B50991412DFC4CF00F9D524 /* cpArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpArray.c; sourceTree = "<group>"; };
+		8B50991512DFC4CF00F9D524 /* cpBB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpBB.c; sourceTree = "<group>"; };
+		8B50991612DFC4CF00F9D524 /* cpBody.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpBody.c; sourceTree = "<group>"; };
+		8B50991712DFC4CF00F9D524 /* cpCollision.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpCollision.c; sourceTree = "<group>"; };
+		8B50991812DFC4CF00F9D524 /* cpHashSet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpHashSet.c; sourceTree = "<group>"; };
+		8B50991912DFC4CF00F9D524 /* cpPolyShape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpPolyShape.c; sourceTree = "<group>"; };
+		8B50991A12DFC4CF00F9D524 /* cpShape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpShape.c; sourceTree = "<group>"; };
+		8B50991B12DFC4CF00F9D524 /* cpSpace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSpace.c; sourceTree = "<group>"; };
+		8B50991C12DFC4CF00F9D524 /* cpSpaceHash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSpaceHash.c; sourceTree = "<group>"; };
+		8B50991D12DFC4CF00F9D524 /* cpVect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpVect.c; sourceTree = "<group>"; };
+		8B50991E12DFC4CF00F9D524 /* prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prime.h; sourceTree = "<group>"; };
+		8B50991F12DFC4CF00F9D524 /* SConscript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SConscript; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* TankWars_Mac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "TankWars_Mac-Info.plist"; path = "Mac/TankWars_Mac-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* TankWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B50939C12DF991B00F9D524 /* Mac */,
+				8B5093AF12DF992300F9D524 /* Game */,
+				8B5093A612DF992300F9D524 /* Networking */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* TankWars.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* TankWars-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				8B5093BE12DF993400F9D524 /* External */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "TankWars-Mac";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* TankWars_Mac_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B5093DE12DF997F00F9D524 /* MainMenu.xib */,
+				8D1107310486CEB800E47090 /* TankWars_Mac-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B50939C12DF991B00F9D524 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				8B50939D12DF991B00F9D524 /* TWMacAppDelegate.h */,
+				8B50939E12DF991B00F9D524 /* TWMacAppDelegate.m */,
+				8B50939F12DF991B00F9D524 /* TWMacPlayerItem.h */,
+				8B5093A012DF991B00F9D524 /* TWMacPlayerItem.m */,
+				8B5093A112DF991B00F9D524 /* TWMacGameView.h */,
+				8B5093A212DF991B00F9D524 /* TWMacGameView.m */,
+			);
+			name = Mac;
+			sourceTree = "<group>";
+		};
+		8B5093A612DF992300F9D524 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8B5093A712DF992300F9D524 /* TWServerDelegate.h */,
+				8B5093A812DF992300F9D524 /* TWServer.h */,
+				8B5093A912DF992300F9D524 /* TWServer.m */,
+				8B5094DE12DFA50F00F9D524 /* TWBrowserDelegate.h */,
+				8B5093AA12DF992300F9D524 /* TWBrowser.h */,
+				8B5093AB12DF992300F9D524 /* TWBrowser.m */,
+				8B5093AC12DF992300F9D524 /* TWConnectionDelegate.h */,
+				8B5093AD12DF992300F9D524 /* TWConnection.h */,
+				8B5093AE12DF992300F9D524 /* TWConnection.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		8B5093AF12DF992300F9D524 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				8B5093B112DF992300F9D524 /* TWCollisionTypes.h */,
+				8B5093B012DF992300F9D524 /* TWGameDelegate.h */,
+				8B5093B212DF992300F9D524 /* TWGame.h */,
+				8B5093B312DF992300F9D524 /* TWGame.m */,
+				8B5093B412DF992300F9D524 /* TWPlayer.h */,
+				8B5093B512DF992300F9D524 /* TWPlayer.m */,
+				8B5093B612DF992300F9D524 /* TWBullet.h */,
+				8B5093B712DF992300F9D524 /* TWBullet.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		8B5093BE12DF993400F9D524 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				8B50978312DFC25900F9D524 /* chipmunk */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		8B50978312DFC25900F9D524 /* chipmunk */ = {
+			isa = PBXGroup;
+			children = (
+				8B5098E612DFC4CF00F9D524 /* include */,
+				8B50990412DFC4CF00F9D524 /* src */,
+			);
+			name = chipmunk;
+			sourceTree = "<group>";
+		};
+		8B5098E612DFC4CF00F9D524 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8B5098E712DFC4CF00F9D524 /* chipmunk */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		8B5098E712DFC4CF00F9D524 /* chipmunk */ = {
+			isa = PBXGroup;
+			children = (
+				8B5098E812DFC4CF00F9D524 /* chipmunk.h */,
+				8B5098E912DFC4CF00F9D524 /* chipmunk_ffi.h */,
+				8B5098EA12DFC4CF00F9D524 /* chipmunk_types.h */,
+				8B5098EB12DFC4CF00F9D524 /* chipmunk_unsafe.h */,
+				8B5098EC12DFC4CF00F9D524 /* constraints */,
+				8B5098F912DFC4CF00F9D524 /* cpArbiter.h */,
+				8B5098FA12DFC4CF00F9D524 /* cpArray.h */,
+				8B5098FB12DFC4CF00F9D524 /* cpBB.h */,
+				8B5098FC12DFC4CF00F9D524 /* cpBody.h */,
+				8B5098FD12DFC4CF00F9D524 /* cpCollision.h */,
+				8B5098FE12DFC4CF00F9D524 /* cpHashSet.h */,
+				8B5098FF12DFC4CF00F9D524 /* cpPolyShape.h */,
+				8B50990012DFC4CF00F9D524 /* cpShape.h */,
+				8B50990112DFC4CF00F9D524 /* cpSpace.h */,
+				8B50990212DFC4CF00F9D524 /* cpSpaceHash.h */,
+				8B50990312DFC4CF00F9D524 /* cpVect.h */,
+			);
+			path = chipmunk;
+			sourceTree = "<group>";
+		};
+		8B5098EC12DFC4CF00F9D524 /* constraints */ = {
+			isa = PBXGroup;
+			children = (
+				8B5098ED12DFC4CF00F9D524 /* cpConstraint.h */,
+				8B5098EE12DFC4CF00F9D524 /* cpDampedRotarySpring.h */,
+				8B5098EF12DFC4CF00F9D524 /* cpDampedSpring.h */,
+				8B5098F012DFC4CF00F9D524 /* cpGearJoint.h */,
+				8B5098F112DFC4CF00F9D524 /* cpGrooveJoint.h */,
+				8B5098F212DFC4CF00F9D524 /* cpPinJoint.h */,
+				8B5098F312DFC4CF00F9D524 /* cpPivotJoint.h */,
+				8B5098F412DFC4CF00F9D524 /* cpRatchetJoint.h */,
+				8B5098F512DFC4CF00F9D524 /* cpRotaryLimitJoint.h */,
+				8B5098F612DFC4CF00F9D524 /* cpSimpleMotor.h */,
+				8B5098F712DFC4CF00F9D524 /* cpSlideJoint.h */,
+				8B5098F812DFC4CF00F9D524 /* util.h */,
+			);
+			path = constraints;
+			sourceTree = "<group>";
+		};
+		8B50990412DFC4CF00F9D524 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8B50990512DFC4CF00F9D524 /* chipmunk.c */,
+				8B50990612DFC4CF00F9D524 /* CMakeLists.txt */,
+				8B50990712DFC4CF00F9D524 /* constraints */,
+				8B50991312DFC4CF00F9D524 /* cpArbiter.c */,
+				8B50991412DFC4CF00F9D524 /* cpArray.c */,
+				8B50991512DFC4CF00F9D524 /* cpBB.c */,
+				8B50991612DFC4CF00F9D524 /* cpBody.c */,
+				8B50991712DFC4CF00F9D524 /* cpCollision.c */,
+				8B50991812DFC4CF00F9D524 /* cpHashSet.c */,
+				8B50991912DFC4CF00F9D524 /* cpPolyShape.c */,
+				8B50991A12DFC4CF00F9D524 /* cpShape.c */,
+				8B50991B12DFC4CF00F9D524 /* cpSpace.c */,
+				8B50991C12DFC4CF00F9D524 /* cpSpaceHash.c */,
+				8B50991D12DFC4CF00F9D524 /* cpVect.c */,
+				8B50991E12DFC4CF00F9D524 /* prime.h */,
+				8B50991F12DFC4CF00F9D524 /* SConscript */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		8B50990712DFC4CF00F9D524 /* constraints */ = {
+			isa = PBXGroup;
+			children = (
+				8B50990812DFC4CF00F9D524 /* cpConstraint.c */,
+				8B50990912DFC4CF00F9D524 /* cpDampedRotarySpring.c */,
+				8B50990A12DFC4CF00F9D524 /* cpDampedSpring.c */,
+				8B50990B12DFC4CF00F9D524 /* cpGearJoint.c */,
+				8B50990C12DFC4CF00F9D524 /* cpGrooveJoint.c */,
+				8B50990D12DFC4CF00F9D524 /* cpPinJoint.c */,
+				8B50990E12DFC4CF00F9D524 /* cpPivotJoint.c */,
+				8B50990F12DFC4CF00F9D524 /* cpRatchetJoint.c */,
+				8B50991012DFC4CF00F9D524 /* cpRotaryLimitJoint.c */,
+				8B50991112DFC4CF00F9D524 /* cpSimpleMotor.c */,
+				8B50991212DFC4CF00F9D524 /* cpSlideJoint.c */,
+			);
+			path = constraints;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* TankWars-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TankWars-Mac" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TankWars-Mac";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "TankWars-Mac";
+			productReference = 8D1107320486CEB800E47090 /* TankWars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Cory Kilger";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TankWars-Mac" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* TankWars-Mac */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* TankWars-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B5093DF12DF997F00F9D524 /* MainMenu.xib in Resources */,
+				8B50992112DFC4CF00F9D524 /* CMakeLists.txt in Resources */,
+				8B50993812DFC4CF00F9D524 /* SConscript in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				8B5093A312DF991B00F9D524 /* TWMacAppDelegate.m in Sources */,
+				8B5093A412DF991B00F9D524 /* TWMacPlayerItem.m in Sources */,
+				8B5093A512DF991B00F9D524 /* TWMacGameView.m in Sources */,
+				8B5093B812DF992300F9D524 /* TWServer.m in Sources */,
+				8B5093B912DF992300F9D524 /* TWBrowser.m in Sources */,
+				8B5093BA12DF992300F9D524 /* TWConnection.m in Sources */,
+				8B5093BB12DF992300F9D524 /* TWGame.m in Sources */,
+				8B5093BC12DF992300F9D524 /* TWPlayer.m in Sources */,
+				8B5093BD12DF992300F9D524 /* TWBullet.m in Sources */,
+				8B50992012DFC4CF00F9D524 /* chipmunk.c in Sources */,
+				8B50992212DFC4CF00F9D524 /* cpConstraint.c in Sources */,
+				8B50992312DFC4CF00F9D524 /* cpDampedRotarySpring.c in Sources */,
+				8B50992412DFC4CF00F9D524 /* cpDampedSpring.c in Sources */,
+				8B50992512DFC4CF00F9D524 /* cpGearJoint.c in Sources */,
+				8B50992612DFC4CF00F9D524 /* cpGrooveJoint.c in Sources */,
+				8B50992712DFC4CF00F9D524 /* cpPinJoint.c in Sources */,
+				8B50992812DFC4CF00F9D524 /* cpPivotJoint.c in Sources */,
+				8B50992912DFC4CF00F9D524 /* cpRatchetJoint.c in Sources */,
+				8B50992A12DFC4CF00F9D524 /* cpRotaryLimitJoint.c in Sources */,
+				8B50992B12DFC4CF00F9D524 /* cpSimpleMotor.c in Sources */,
+				8B50992C12DFC4CF00F9D524 /* cpSlideJoint.c in Sources */,
+				8B50992D12DFC4CF00F9D524 /* cpArbiter.c in Sources */,
+				8B50992E12DFC4CF00F9D524 /* cpArray.c in Sources */,
+				8B50992F12DFC4CF00F9D524 /* cpBB.c in Sources */,
+				8B50993012DFC4CF00F9D524 /* cpBody.c in Sources */,
+				8B50993112DFC4CF00F9D524 /* cpCollision.c in Sources */,
+				8B50993212DFC4CF00F9D524 /* cpHashSet.c in Sources */,
+				8B50993312DFC4CF00F9D524 /* cpPolyShape.c in Sources */,
+				8B50993412DFC4CF00F9D524 /* cpShape.c in Sources */,
+				8B50993512DFC4CF00F9D524 /* cpSpace.c in Sources */,
+				8B50993612DFC4CF00F9D524 /* cpSpaceHash.c in Sources */,
+				8B50993712DFC4CF00F9D524 /* cpVect.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/TankWars_Mac_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Mac/TankWars_Mac-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/External\"",
+				);
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fobjc-nonfragile-abi2",
+				);
+				PRODUCT_NAME = TankWars;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/TankWars_Mac_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Mac/TankWars_Mac-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/External\"",
+				);
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fobjc-nonfragile-abi2",
+				);
+				PRODUCT_NAME = TankWars;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TankWars-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TankWars-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

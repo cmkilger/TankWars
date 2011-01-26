@@ -16,6 +16,5 @@
 - (void) playerConnected:(TWPlayer *)player;
 - (void) removePlayer:(TWPlayer *)player;
 - (void) updateView;
-//- (void) start;
 
 @end

@@ -10,14 +10,7 @@
 #import "TWBrowserDelegate.h"
 
 
-@interface TWBrowser : NSObject <NSNetServiceDelegate, NSNetServiceBrowserDelegate> {
-	id<TWBrowserDelegate> delegate;
-	NSMutableArray * services;
-	NSNetServiceBrowser * serviceBrowser;
-	NSNetService * service;
-	NSInputStream * inputStream;
-	NSOutputStream * outputStream;
-}
+@interface TWBrowser : NSObject <NSNetServiceDelegate, NSNetServiceBrowserDelegate>
 
 @property (nonatomic, assign) id<TWBrowserDelegate> delegate;
 

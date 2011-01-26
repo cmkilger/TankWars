@@ -14,6 +14,7 @@
 @property (nonatomic, assign) id<TWConnectionDelegate> delegate;
 
 - (id) initWithNativeHandle:(CFSocketNativeHandle)handle;
+- (id) initWithService:(NSNetService *)service;
 - (void) sendData:(NSData *)data;
 
 @end

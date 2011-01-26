@@ -44,6 +44,31 @@
 	return self;
 }
 
+// !!!: This can be done in the presentation
+- (id) initWithService:(NSNetService *)service {
+	if (!(self = [super init]))
+		return nil;
+	
+	if (![service getInputStream:&input outputStream:&output]) {
+		[self release];
+		return nil;
+	}
+	
+	input.delegate = self;
+	output.delegate = self;
+	[input scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+	[output scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+	[input open];
+	[output open];
+		
+	self.unsentData = [NSMutableData data];
+	
+	NSLog(@"input: %@", input);
+	NSLog(@"output: %@", output);
+	
+	return self;
+}
+
 - (void) dealloc {
 	[unsentData release];
 	input.delegate = nil;
