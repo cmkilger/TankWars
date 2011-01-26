@@ -25,6 +25,8 @@
 @property (nonatomic, assign) cpShape * shape;
 @property (nonatomic, assign) CGFloat cooldown;
 
+- (NSData *) fireData;
+
 @end
 
 
@@ -138,14 +140,19 @@
 	// Firing
 	cooldown -= dt;
 	if (firing && cooldown <= 0.0) {
-		cooldown = COOLDOWN;
-		TWBullet * bullet = [[TWBullet alloc] initWithSpace:space];
-		cpVect loc = cpvadd(cpBodyGetPos(body), cpvmult(cpvnormalize_safe(cpBodyGetRot(body)), radius*2.0));
-		bullet.location = CGPointMake(loc.x, loc.y);
-		bullet.rotation = self.rotation;
-		bullet.velocity = BULLET_VEL;
-		[bullets addObject:bullet];
-		[bullet release];
+		if (game.connection) {
+			[game.connection sendData:[self fireData]];
+		}
+		else {
+			cooldown = COOLDOWN;
+			TWBullet * bullet = [[TWBullet alloc] initWithSpace:space];
+			cpVect loc = cpvadd(cpBodyGetPos(body), cpvmult(cpvnormalize_safe(cpBodyGetRot(body)), radius*2.0));
+			bullet.location = CGPointMake(loc.x, loc.y);
+			bullet.rotation = self.rotation;
+			bullet.velocity = BULLET_VEL;
+			[bullets addObject:bullet];
+			[bullet release];
+		}
 	}
 	
 	// Update bullets
@@ -306,6 +313,11 @@ FAILED:
 #pragma mark Player Info
 
 - (NSDictionary *) playerInfo {
+	NSMutableDictionary * bulletsInfo = [NSMutableDictionary dictionary];
+	
+	for (TWBullet * bullet in bullets)
+		[bulletsInfo setObject:bullet.bulletInfo forKey:[NSNumber numberWithUnsignedInt:bullet.identifier]];
+	
 	CGPoint aLocation = self.location;
 	CGFloat aRotation = self.rotation;
 	CGFloat aVelocity = self.velocity;
@@ -315,6 +327,7 @@ FAILED:
 						   [NSNumber numberWithFloat:aLocation.y], @"locationY",
 						   [NSNumber numberWithFloat:aRotation], @"rotation",
 						   [NSNumber numberWithFloat:aVelocity], @"velocity",
+						   
 						   nil];
 	
 	return dict;
@@ -324,6 +337,25 @@ FAILED:
 	self.location = CGPointMake([[dict objectForKey:@"locationX"] floatValue], [[dict objectForKey:@"locationY"] floatValue]);
 	self.rotation = [[dict objectForKey:@"rotation"] floatValue];
 	self.velocity = [[dict objectForKey:@"velocity"] floatValue];
+}
+
+#pragma mark -
+
+- (NSData *) fireData {
+	NSMutableData * data = [NSMutableData data];
+	
+	UInt8 type = TWPlayerPacketTypeFire;
+	
+	NSData * content = [uuid dataUsingEncoding:NSUTF8StringEncoding];
+	
+	UInt32 length = [content length];
+	UInt32 size = CFSwapInt32HostToBig(length);
+	
+	[data appendBytes:&type length:sizeof(UInt8)];
+	[data appendBytes:&size length:sizeof(UInt32)];
+	[data appendData:content];
+	
+	return data;
 }
 
 @end
