@@ -115,6 +115,8 @@ void postBullet(cpSpace *space, void *key, void *data);
 	[remotePlayers addObject:player];
 	[connectingPlayers removeObject:player];
 	[delegate playerConnected:player];
+	if (space)
+		[player addToSpace:space ofSize:arenaSize];
 	[player.connection sendData:[self playerDataForPlayer:localPlayer]];
 	for (TWPlayer * remotePlayer in remotePlayers) {
 		if (player != remotePlayer) {
