@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'TankWars' target in the 'TankWars' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
