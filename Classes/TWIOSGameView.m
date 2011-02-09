@@ -143,15 +143,17 @@ static inline CGColorRef TWColorCreateWithPointer(void * ptr) {
 }
 
 - (void)drawRect:(CGRect)dirtyRect {
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	CGContextScaleCTM(context, 1.0, -1.0);
+	CGContextTranslateCTM(context, 0.0, -CGRectGetHeight(self.bounds));
+	
 	TWPlayer * localPlayer = game.localPlayer;
 	CGColorRef randomColor = TWColorCreateWithPointer(localPlayer);
 	[self drawPlayer:localPlayer withColor:randomColor];
-	CGColorRelease(randomColor);
     
 	for (TWPlayer * remotePlayer in game.remotePlayers) {
 		CGColorRef redColor = [[UIColor redColor] CGColor];
 		[self drawPlayer:remotePlayer withColor:redColor];
-		CGColorRelease(redColor);
 	}
 }
 

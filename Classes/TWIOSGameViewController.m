@@ -29,7 +29,7 @@
     [super viewDidLoad];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		gameView.transform = CGAffineTransformMakeScale(1.06666, 1.2);
+		gameView.transform = CGAffineTransformMakeScale(16/15.0, 16/15.0);
 	}
 	else {
 		gameView.transform = CGAffineTransformMakeScale(0.5, 0.5);
@@ -38,12 +38,15 @@
 
 
 - (void) setGame:(TWGame *)newGame {
+	[newGame retain];
+	[game release];
+	game = newGame;
 	gameView.game = game;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.
-    return YES;
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 
@@ -69,7 +72,8 @@
 #pragma mark -
 
 - (void) update {
-	
+	gameView.game = game;
+	[gameView setNeedsDisplay];
 }
 
 @end

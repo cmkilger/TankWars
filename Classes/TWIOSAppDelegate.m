@@ -65,7 +65,9 @@
 	// TODO: start game
 	[gameViewController dismissModalViewControllerAnimated:YES];
 	self.game = [[[TWGame alloc] initWithConnection:connection] autorelease];
+	game.delegate = self;
 	[game start];
+	gameViewController.game = game;
 }
 
 - (void) browser:(TWBrowser *)browser didNotResolveService:(NSNetService *)service errorDict:(NSDictionary *)errorDict {
