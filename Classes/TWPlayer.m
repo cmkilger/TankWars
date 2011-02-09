@@ -316,7 +316,7 @@ FAILED:
 	NSMutableDictionary * bulletsInfo = [NSMutableDictionary dictionary];
 	
 	for (TWBullet * bullet in bullets)
-		[bulletsInfo setObject:bullet.bulletInfo forKey:[NSNumber numberWithUnsignedInt:bullet.identifier]];
+		[bulletsInfo setObject:bullet.bulletInfo forKey:[NSNumber numberWithUnsignedInteger:bullet.identifier]];
 	
 	CGPoint aLocation = self.location;
 	CGFloat aRotation = self.rotation;
@@ -327,13 +327,17 @@ FAILED:
 						   [NSNumber numberWithFloat:aLocation.y], @"locationY",
 						   [NSNumber numberWithFloat:aRotation], @"rotation",
 						   [NSNumber numberWithFloat:aVelocity], @"velocity",
-						   
+						   bulletsInfo, @"bullets",
 						   nil];
 	
 	return dict;
 }
 
 - (void) setPlayerInfo:(NSDictionary *)dict {
+	NSDictionary * bulletDict = [dict objectForKey:@"bullets"];
+	
+	// TODO: Update and compare bullets, blah, blah, blah...
+	
 	self.location = CGPointMake([[dict objectForKey:@"locationX"] floatValue], [[dict objectForKey:@"locationY"] floatValue]);
 	self.rotation = [[dict objectForKey:@"rotation"] floatValue];
 	self.velocity = [[dict objectForKey:@"velocity"] floatValue];
